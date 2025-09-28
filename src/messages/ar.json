@@ -1,5 +1,12 @@
 {
-    "Home":{
-        "Main":"ي هلا والله"
-    }
+  "Home":{},
+  "Navbar": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "gallery": "المعرض",
+    "blog": "المدونة",
+    "contact": "اتصل بنا",
+    "switch": "English"
+  }
 }
