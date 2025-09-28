@@ -236,7 +236,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
               <div className="relative">
                 <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8">
                   <img
-                    src="/professional-fire-safety-engineer-inspecting-equip.jpg"
+                    src="/image/professional-fire-safety-engineer-inspecting-equip.jpg"
                     alt="ProtectionCO professional inspecting fire safety equipment"
                     className="w-full h-full object-cover rounded-xl"
                   />
