@@ -1,13 +1,363 @@
 {
-  "Home":{},
+   "Home": {
+    "hero": {
+      "badge": "Established 2008 • Trusted in Egypt",
+      "title": "Limitless <span>Protection</span>  for Life and Property",
+      "subtitle": "Leading fire protection and safety equipment company in Egypt, specializing in comprehensive firefighting systems, security solutions, and life safety equipment since 2008.",
+      "buttons": {
+        "quote": "Get Free Quote",
+        "services": "Our Services"
+      }
+    },
+    "stats": {
+      "years": "Years of Excellence",
+      "projects": "Projects Completed",
+      "safety": "Safety Compliance",
+      "support": "Support Available"
+    },
+    "services": {
+      "heading": "Our Core Services",
+      "description": "Comprehensive fire protection and safety solutions designed to protect lives and property across Egypt.",
+      "list": [
+        {
+          "title": "Fire Protection Systems",
+          "description": "Complete firefighting solutions including sprinkler systems, suppression systems, and fire pumps."
+        },
+        {
+          "title": "Fire Alarm Systems",
+          "description": "Advanced addressable fire detection and alarm systems for early warning and emergency response."
+        },
+        {
+          "title": "Maintenance & Support",
+          "description": "Ongoing maintenance, testing, and commissioning services to ensure optimal system performance."
+        }
+      ]
+    },
+    "whyChoose": {
+      "heading": "Why Choose Protection?",
+      "description": "As Egypt's trusted fire protection specialist, we combine international standards with local expertise to deliver unparalleled safety solutions.",
+      "points": [
+        {
+          "title": "Certified Excellence",
+          "description": "Registered with Egyptian Federation for Construction and Building Contractors (EFCBC)"
+        },
+        {
+          "title": "Premium Partners",
+          "description": "Working with world leaders: Al-Telwany , Delta International Cooling, Aromatic Factory, Heaven Beach Hotel "
+        },
+        {
+          "title": "Complete Solutions",
+          "description": "From design and engineering to installation, maintenance, and training"
+        },
+        {
+          "title": "Standards Compliance",
+          "description": "Committed to international standards and codes in all our projects"
+        }
+      ]
+    },
+    "commitment": {
+      "heading": "Our Commitment",
+      "description": "Dedicated to providing world-class fire protection solutions that save lives and protect property.",
+      "list": [
+        {
+          "title": "Expert Team",
+          "description": "Specialized crew with unparalleled expertise in fire safety and control systems across Egypt."
+        },
+        {
+          "title": "Quality Assurance",
+          "description": "Committed to quality, safety, and environmental management systems with continuous improvement."
+        },
+        {
+          "title": "Long-term Partnership",
+          "description": "Serving clients for decades with ongoing maintenance, support, and commitment to workplace safety."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Ready to Secure Your Property?",
+      "description": "Get a comprehensive fire protection assessment and customized safety solution for your facility.",
+      "buttons": {
+        "contact": "Contact Us Today",
+        "about": "Learn More About ProtectionCO"
+      }
+    }
+  },
+   "About": {
+    "hero": {
+      "badge": "About Protection",
+      "title": "Leading Egypt's Fire Protection Industry Since <span>2008</span>",
+      "subtitle": "Safety Equipment Service Company (Protection) is a fast-growing company established in Sadat City, Egypt, dedicated to serving the HSE field, especially fire protection departments, to save lives and properties."
+    },
+    "story": {
+      "heading": "Our Story",
+      "paragraphs": [
+        "Limitless protection is more than just a slogan; it's a way of life for Protection. Keeping you safe and your property secure is our business.",
+        "With our specialized crew, Protection has been an unparalleled leader in fire safety & control in Sadat City and most governorates in Egypt. In recognition of our outstanding growth and commitment to quality, Protection has been registered in the Egyptian Federation for Construction and Building Contractors (EFCBC), as an Electro-mechanic contractor.",
+        "Protection appreciates your business and your commitment to safety in the workplace and looks forward to serving you for decades to come."
+      ]
+    },
+    "missionVision": {
+      "heading": "Mission & Vision",
+      "description": "Our success is driven by our commitment to excellence and innovation in fire protection.",
+      "cards": [
+        {
+          "title": "Our Mission",
+          "description": "Our success is driven by our slogan \"limitless protection\". We are committed to providing world-class fire protection solutions that safeguard lives and property through innovative technology and exceptional service."
+        },
+        {
+          "title": "Our Vision",
+          "description": "Our vision is to become the leader company in our city and whole country of innovative solutions in protecting life and property, setting the standard for excellence in fire protection and safety services across Egypt."
+        }
+      ]
+    },
+    "profile": {
+      "heading": "Company Profile",
+      "description": "Protection was founded in Egypt, Sadat City, to become the leading producer and supplier of life safety solutions.",
+      "features": [
+        {
+          "title": "Our Specialization",
+          "description": "We became specialized by offering complete solutions for all types of firefighting equipment, fire protection systems, fire alarms, addressable emergency systems, and CCTV systems."
+        },
+        {
+          "title": "Premium Partnerships",
+          "description": "Protection depends on specified products manufactured by world leaders in the field such as NAFFCO, SFFECO, NATIONAL valves, GLOBE sprinkler system, POTTER and APOLLO alarm systems."
+        },
+        {
+          "title": "Standards Commitment",
+          "description": "We are always committed to standards and codes in our projects, ensuring the highest level of safety and compliance in every installation."
+        }
+      ],
+      "services": {
+        "title": "Our Services Include",
+        "items": [
+          "Design & Engineering",
+          "Manufacturing & Supply",
+          "Installation & Integration",
+          "Testing & Commissioning",
+          "Training & Support",
+          "Maintenance Services"
+        ]
+      },
+      "quality": {
+        "title": "Quality Commitment",
+        "description": "Protection is committed to providing quality services that comply with specified and implied requirements of our clients, ensuring fitness for purpose and complete satisfaction."
+      }
+    },
+    "policy": {
+      "heading": "Management Policy",
+      "description": "Our commitment to excellence drives every aspect of our operations.",
+      "paragraphs": [
+        "Protection is committed to provide world class products and integrated solutions related to Design, Engineering, Manufacturing, Installation, Maintenance, Testing and Commissioning of Firefighting equipment, & security systems including Fire detection, Alarm, Suppression, and CCTV systems.",
+        "This is achieved through fulfillment of needs and expectations of relevant interested parties. Protection is committed to comply with all applicable legal & other requirements relating to its quality, safety and environment management system.",
+        "Protection continually improves the effectiveness of quality, safety and environment management system by establishing, reviewing and accomplishing its objectives. The top management ensures this policy is communicated, understood, implemented and maintained throughout Protection and is also made available to other relevant interested parties."
+      ]
+    },
+    "cta": {
+      "heading": "Partner with Protection",
+      "description": "Join hundreds of satisfied clients who trust Protection for their fire protection and safety needs.",
+      "buttons": {
+        "services": "Explore Our Services",
+        "contact": "Get in Touch"
+      }
+    }
+  },
 
   "Navbar": {
     "home": "Home",
-    "about": "About",
+    "about": "About US",
     "services": "Services",
-    "gallery": "Gallery",
-    "blog": "Blog",
-    "contact": "Contact",
+    "product": "Products",
+    "projects": "Projects",
+    "client": "Our Client",
+    "careers": "Careers",
+    "contact": "Contact US",
+    "fire" : "Fire-Protection System Solution ",
+    "Fire-Alarms-Systems" : "Fire Alarms Systems",
+    "maintenance":"Regular Maintenance",
+    "protection-fire-product" : "Protection Fire Products",
+    "global-fire" : "Global-Fire Equipment",
     "switch": "العربية"
+  },
+  "categories": 
+  {
+    "list" : [
+    {
+      "title": "Commercial & Residential Projects",
+      "description": "Fire systems and maintenance for malls, compounds, and housing complexes.",
+      "projects": 4,
+      "clients": [
+        "Al-Telwany Mall – Sadat City",
+        "Al-Telwany Compound – Sadat City",
+        "Abo Zaid Hypermarket – Sadat City",
+        "Faculty Housing Compound – Cairo University – Sheikh Zayed"
+      ]
+    },
+    {
+      "title": "Industrial Facilities",
+      "description": "Advanced fire protection for factories and industrial plants.",
+      "projects": 6,
+      "clients": [
+        "Duck & Pipe Metal Forming – Sadat City",
+        "El-Abd (White Point) Factory – October / Sadat City",
+        "Aromatic Factory – Sadat City",
+        "Baram Carton Factory – Sadat City",
+        "Kemit Plastic Pipes Factory – Sadat City",
+        "Beta Polymer Factory – Misurata, Libya"
+      ]
+    },
+    {
+      "title": "Hospitality & Tourism",
+      "description": "Hotels, resorts and leisure facilities equipped with fire systems.",
+      "projects": 3,
+      "clients": [
+        "Heaven Beach Hotel – Ain Sokhna",
+        "Dahab Plaza Hotel – South Sinai",
+        "Sheesh Beesh Café – Sadat City"
+      ]
+    },
+    {
+      "title": "Educational & Institutional",
+      "description": "Fire protection for universities, schools and training facilities.",
+      "projects": 4,
+      "clients": [
+        "Islamic Studies College – Sadat City",
+        "University Housing – Cairo University",
+        "Al-Azhar University – Sadat",
+        "Beverly Hills Compound Management – Sodic"
+      ]
+    },
+    {
+      "title": "Fuel & Petrochemical",
+      "description": "Specialized systems for fuel stations, petrochemical and storage facilities.",
+      "projects": 3,
+      "clients": [
+        "Baron Fuel Station – Cairo-Alex Desert Road",
+        "Delta International Cooling & Freezing – Qalyubia",
+        "Super Pack Carton Factory – Sadat City"
+      ]
+    }
+  ]
+  } ,
+
+  "ClientPage": {
+      "hero": {
+      "title": "Our Trusted <span>Clients</span>",
+      "subtitle": "Over 15 years of protecting Egypt's most important facilities with world-class fire safety solutions",
+      "stats": {
+        "projects": "Projects Completed",
+        "clients": "Satisfied Clients",
+        "experience": "Years Experience"
+      }
+    },
+    "categories": {
+      "heading": "Industries We Serve",
+      "description": "From healthcare to industrial facilities, we provide specialized fire protection solutions across all sectors",
+      "list": []
+    },
+    "testimonials": {
+      "heading": "What Our Clients Say",
+      "description": "Don't just take our word for it - hear from the clients who trust Protection with their fire protection needs"
+    },
+    "cta": {
+      "title": "Join Our Growing List of Satisfied Clients",
+      "description": "Ready to protect your facility with world-class fire safety solutions? Contact us today for a free consultation and quote.",
+      "buttons": {
+        "quote": "Get Free Quote",
+        "projects": "View Our Projects"
+      }
+    }
+  },
+  "Contact": {
+    "hero": {
+      "badge": "Contact Us",
+      "title": "Get in Touch with <span>Protection</span>",
+      "subtitle": "Ready to protect your assets? Contact our fire protection experts for a consultation, quote, or any questions about our services."
+    },
+    "form": {
+      "heading": "Send us a Message",
+      "title": "Request a Quote",
+      "description": "Fill out the form below and we'll get back to you within 24 hours.",
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "company": "Company Name",
+        "service": "Service Interested In",
+        "message": "Message"
+      },
+      "placeholders": {
+        "firstName": "Enter your first name",
+        "lastName": "Enter your last name",
+        "email": "Enter your email address",
+        "phone": "Enter your phone number",
+        "company": "Enter your company name",
+        "message": "Tell us about your project requirements..."
+      },
+      "options": {
+        "select": "Select a service",
+        "fireFighting": "Fire Fighting Systems",
+        "fireAlarm": "Fire Alarm Systems",
+        "cctv": "CCTV & Security Systems",
+        "maintenance": "Maintenance & Support",
+        "consultation": "Consultation",
+        "other": "Other"
+      },
+      "button": "Send Message"
+    },
+    "info": {
+      "heading": "Contact Information",
+      "description": "Get in touch with our team of fire protection experts. We're here to help you with all your safety and security needs.",
+      "phone": {
+        "title": "Phone",
+        "numbers": ["+20 101 1006 205", "048 2668883"]
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@Protection4safety-egypt.com"
+      },
+      "address": {
+        "title": "Address",
+        "lines": ["Sadat City, Menoufia Governorate", "Egypt"]
+      },
+      "hours": {
+        "title": "Business Hours",
+        "lines": ["Sunday - Thursday: 8:00 AM - 6:00 PM", "Friday - Saturday: 9:00 AM - 4:00 PM"]
+      },
+      "emergency": {
+        "title": "24/7 Emergency Support",
+        "description": "For urgent fire protection emergencies, call our 24/7 hotline",
+        "phone": "+20 100 000 0000"
+      }
+    },
+    "map": {
+      "heading": "Find Us",
+      "description": "Visit our headquarters in Sadat City or contact us to schedule a site visit.",
+      "note": "Interactive map would be embedded here",
+      "address": "Sadat City, Menoufia, Egypt"
+    }
+  },
+   "Footer": {
+    "company": {
+      "description": "Safety Equipment Service Company - Your trusted partner in fire protection and safety solutions since 2008."
+    },
+    "quickLinks": "Quick Links",
+    "links": {
+      "about": "About Us",
+      "services": "Our Services",
+      "projects": "Projects",
+      "clients": "Clients"
+    },
+    "services": "Services",
+    "servicesList": {
+      "fireProtection": "Fire Protection Systems",
+      "fireAlarm": "Fire Alarm Systems",
+      "maintenance": "Maintenance & Support"
+    },
+    "contact": "Contact Info",
+    "address": "Sadat City, Menoufia Governorate, Egypt",
+    "phone": "+20 101 1006 205",
+    "email": "info@Protection4safety-egypt.com",
+    "rights": "All rights reserved."
   }
 }

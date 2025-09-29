@@ -126,3 +126,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar {
+  width: 20px;              
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;     
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc2626;       
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c;     
+}
+
+/* للـ Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dc2626 #f1f1f1;
+}
