@@ -1,4 +1,6 @@
-import Link from 'next/link';
+'use client';
+
+import { Link } from '@/i18n/routing';
 import {
   Shield,
   Mail,
@@ -8,8 +10,11 @@ import {
   Linkedin,
   Twitter,
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function Footer() {
+  const t = useTranslations('Footer');
+
   return (
     <footer className="bg-card border-t">
       <div className="container mx-auto px-4 py-12">
@@ -18,11 +23,10 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Shield className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold">protection</span>
+              <span className="text-xl font-bold">Protection</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Safety Equipment Service Company - Your trusted partner in fire
-              protection and safety solutions since 2008.
+              {t('company.description')}
             </p>
             <div className="flex space-x-4">
               <Link
@@ -48,14 +52,14 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Quick Links</h3>
+            <h3 className="font-semibold">{t('quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/about"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  About Us
+                  {t('links.about')}
                 </Link>
               </li>
               <li>
@@ -63,23 +67,23 @@ export function Footer() {
                   href="/services"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Our Services
+                  {t('links.services')}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/gallery"
+                  href="/projects"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Project Gallery
+                  {t('links.projects')}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href="/clients"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Latest News
+                  {t('links.clients')}
                 </Link>
               </li>
             </ul>
@@ -87,24 +91,21 @@ export function Footer() {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Services</h3>
+            <h3 className="font-semibold">{t('services')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <span className="text-muted-foreground">
-                  Fire Protection Systems
+                  {t('servicesList.fireProtection')}
                 </span>
               </li>
               <li>
                 <span className="text-muted-foreground">
-                  Fire Alarm Systems
+                  {t('servicesList.fireAlarm')}
                 </span>
               </li>
               <li>
-                <span className="text-muted-foreground">CCTV & Security</span>
-              </li>
-              <li>
                 <span className="text-muted-foreground">
-                  Maintenance & Support
+                  {t('servicesList.maintenance')}
                 </span>
               </li>
             </ul>
@@ -112,23 +113,19 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Contact Info</h3>
+            <h3 className="font-semibold">{t('contact')}</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  Sadat City, Menoufia Governorate, Egypt
-                </span>
+                <span className="text-muted-foreground">{t('address')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">+20 XXX XXX XXXX</span>
+                <span className="text-muted-foreground">{t('phone')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">
-                  info@Protectionco-egypt.com
-                </span>
+                <span className="text-muted-foreground">{t('email')}</span>
               </div>
             </div>
           </div>
@@ -136,8 +133,8 @@ export function Footer() {
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; 2025 ProtectionCO - Safety Equipment Service Company. All
-            rights reserved.
+            &copy; 2025 ProtectionCO - Safety Equipment Service Company.{' '}
+            {t('rights')}
           </p>
         </div>
       </div>
