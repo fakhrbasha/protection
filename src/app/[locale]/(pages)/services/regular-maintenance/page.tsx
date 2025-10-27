@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -13,9 +15,11 @@ import {
   AlertTriangle,
   Phone,
   Clock,
+  ArrowRight,
 } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Link } from '@/i18n/routing';
 
 export default function RegularMaintenancePage() {
   const maintenanceServices = [
@@ -341,31 +345,56 @@ export default function RegularMaintenancePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Don't Wait for System Failure
+      <section className="relative py-24 overflow-hidden">
+        {/* 🎨 Animated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-foreground/30 dark:from-primary dark:via-primary/80 dark:to-primary-foreground/20 animate-gradient-slow" />
+
+        {/* 🟪 Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/30 mix-blend-multiply" />
+
+        {/* ✨ Content */}
+        <div className="relative container mx-auto px-4 text-center text-primary-foreground">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            {/* 🏷 Heading */}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
+              Don’t Wait for System Failure
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Regular maintenance is essential for fire protection system
-              reliability. Contact us today to set up a maintenance plan for
-              your facility.
+
+            {/* 📝 Description */}
+            <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
+              Regular maintenance ensures reliability, safety, and compliance.
+              Let’s keep your fire protection systems always ready.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-lg px-8">
-                <Link href="/contact">Get Maintenance Quote</Link>
-              </Button>
+
+            {/* 🎯 Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
-                asChild
-                variant="outline"
                 size="lg"
-                className="text-lg px-8 bg-transparent"
+                variant="secondary"
+                className="px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                asChild
+              >
+                <Link href="/contact" className="flex items-center space-x-2">
+                  <span>Get Maintenance Quote</span>
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 py-6 text-lg border-2 font-semibold border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-transparent"
+                asChild
               >
                 <Link href="/services">View All Services</Link>
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
