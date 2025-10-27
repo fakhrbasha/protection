@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import {
   Shield,
@@ -27,23 +28,57 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-background to-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-6">
-              {t('hero.badge')}
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-              {t.rich('hero.title', {
-                span: (chunks) => (
-                  <span className="text-primary">{chunks}</span>
-                ),
-              })}
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-              {t('hero.subtitle')}
-            </p>
-          </div>
+
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* 🖼️ Background Image */}
+        <img
+          src="/image/aboutI.png"
+          alt="About our fire protection company"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* 🔲 Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
+        {/* ✨ Content */}
+        <div className="relative z-10 text-center text-white px-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg"
+          >
+            {t.rich('hero.title', {
+              span: (chunks) => <span className="text-primary">{chunks}</span>,
+            })}
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed"
+          >
+            {t('hero.subtitle')}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="mt-8"
+          >
+            <Button
+              size="lg"
+              variant="secondary"
+              asChild
+              className="font-semibold shadow-lg"
+            >
+              <Link href="/contact" className="flex items-center space-x-2">
+                <span>{t('hero.button', { defaultValue: 'Contact Us' })}</span>
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
@@ -66,7 +101,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6">
                 <img
-                  src="/Protection-team-fire-safety-professionals-egypt.jpg"
+                  src="/image/HERO.jpeg"
                   alt="Protection team of fire safety professionals in Egypt"
                   className="w-full h-full object-cover rounded-xl"
                 />
@@ -200,7 +235,7 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      {/* <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t('cta.heading')}
@@ -224,6 +259,54 @@ export default function AboutPage() {
               <Link href="/contact">{t('cta.buttons.contact')}</Link>
             </Button>
           </div>
+        </div>
+      </section> */}
+      {/* 🌟 Call to Action Section */}
+      <section className="relative py-24 overflow-hidden">
+        {/* 🎨 Animated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-foreground/20 animate-gradient-slow" />
+
+        {/* 🟪 Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
+
+        <div className="relative container mx-auto px-4 text-center text-primary-foreground">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
+              {t('cta.heading')}
+            </h2>
+            <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
+              {t('cta.description')}
+            </p>
+
+            {/* 🎯 Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                asChild
+              >
+                <Link href="/services" className="flex items-center space-x-2">
+                  <span>{t('cta.buttons.services')}</span>
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 py-6 text-lg border-2 font-semibold border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-transparent"
+                asChild
+              >
+                <Link href="/contact">{t('cta.buttons.contact')}</Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

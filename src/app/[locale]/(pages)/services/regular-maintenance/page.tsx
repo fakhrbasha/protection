@@ -15,6 +15,7 @@ import {
   Clock,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function RegularMaintenancePage() {
   const maintenanceServices = [
@@ -132,37 +133,43 @@ export default function RegularMaintenancePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-primary/10 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Settings className="h-12 w-12 text-primary mr-4" />
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-                Regular <span className="text-primary">Maintenance</span>
-              </h1>
-            </div>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Keep your fire protection systems operating at peak performance
-              with our comprehensive maintenance services
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-center">
-              <div className="bg-background/80 backdrop-blur rounded-lg p-4 border">
-                <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">
-                  Emergency Support
-                </div>
-              </div>
-              <div className="bg-background/80 backdrop-blur rounded-lg p-4 border">
-                <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">
-                  Systems Maintained
-                </div>
-              </div>
-              <div className="bg-background/80 backdrop-blur rounded-lg p-4 border">
-                <div className="text-3xl font-bold text-primary">99.8%</div>
-                <div className="text-sm text-muted-foreground">Uptime Rate</div>
-              </div>
-            </div>
+      <section className="relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
+        <Image
+          src="/image/Hero1.png"
+          alt="Fire System Maintenance"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/30 dark:from-black/80 dark:via-black/60 dark:to-black/30" />
+
+        <div className="relative z-10 px-6 max-w-3xl text-white">
+          <div className="flex items-center justify-center mb-4">
+            <Settings className="h-12 w-12 text-red-500 mr-3" />
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              Regular Maintenance
+            </h1>
+          </div>
+          <p className="text-lg md:text-xl text-gray-200 mb-8">
+            Keep your fire protection systems operating at peak performance with
+            our comprehensive maintenance services.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="text-lg px-8 bg-red-600 hover:bg-red-700 text-white"
+            >
+              <Link href="/contact">Request Maintenance</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-black"
+            >
+              <Link href="/services">View All Services</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -234,72 +241,6 @@ export default function RegularMaintenancePage() {
                     </div>
                   </div>
                   <Button className="w-full">Learn More</Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Maintenance Plans */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Maintenance Plans
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose the maintenance plan that best fits your facility's needs
-              and budget
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {maintenancePlans.map((plan, index) => (
-              <Card
-                key={index}
-                className={`relative flex flex-col justify-between hover:shadow-xl transition-all duration-300 ${
-                  plan.popular ? 'border-2 border-primary' : ''
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-primary text-white">
-                      Most Popular
-                    </Badge>
-                  </div>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    {plan.price}
-                  </div>
-                  <CardDescription>Ideal for {plan.ideal}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex flex-col flex-grow justify-between">
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center space-x-2"
-                      >
-                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    className={`w-full ${
-                      plan.popular
-                        ? 'bg-primary text-white hover:bg-primary/90 font-semibold'
-                        : ''
-                    }`}
-                    variant={plan.popular ? 'default' : 'outline'}
-                  >
-                    Choose Plan
-                  </Button>
                 </CardContent>
               </Card>
             ))}

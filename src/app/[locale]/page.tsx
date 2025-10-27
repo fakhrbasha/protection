@@ -21,31 +21,52 @@ import {
   Phone,
   ArrowRight,
 } from 'lucide-react';
-import { ImagesSliderDemo } from './components/imageSlider/imageSlider';
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
+import CTASection from './components/CTA/CTAsection';
+import BrowseProducts from './components/BrowseProducts/BrowseProducts';
+import CommitmentSection from './components/CommitmentSection/CommitmentSection';
 
 export default function Home() {
   const t = useTranslations('Home');
+  const cta = useTranslations('CTA');
+  const browse = useTranslations('browse');
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <ImagesSliderDemo />
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/30">
-        <div className="absolute inset-0 bg-[url('/industrial-fire-protection-equipment-facility.jpg')] bg-cover bg-center opacity-5" />
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <Badge variant="secondary" className="mb-6">
+      {/* ✅ Hero Section with Video */}
+      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+        {/* 🎥 Video Background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/video/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* 🔲 Overlay with Blur */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-xs"></div>
+
+        {/* ✨ Hero Content */}
+        <div className="container mx-auto px-4 text-center relative z-10 text-white">
+          <Badge variant="secondary" className="mb-6 bg-white/20 text-white">
             {t('hero.badge')}
           </Badge>
+
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
             {t.rich('hero.title', {
               span: (chunks) => <span className="text-primary">{chunks}</span>,
               br: () => <br />,
             })}
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto text-pretty">
+
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto text-pretty">
             {t('hero.subtitle')}
           </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/contact" className="flex items-center space-x-2">
@@ -53,7 +74,13 @@ export default function Home() {
                 <span>{t('hero.buttons.quote')}</span>
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-red-500 hover:border-none"
+              asChild
+            >
               <Link href="/services" className="flex items-center space-x-2">
                 <span>{t('hero.buttons.services')}</span>
                 <ArrowRight className="h-5 w-5" />
@@ -64,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -85,8 +112,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <BrowseProducts t={browse} />
       {/* Services Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -127,7 +155,7 @@ export default function Home() {
 
       {/* Why Choose Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="container px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -157,8 +185,10 @@ export default function Home() {
 
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8">
-                <img
-                  src="/image/professional-fire-safety-engineer-inspecting-equip.jpg"
+                <Image
+                  height={500}
+                  width={500}
+                  src="/image/careHero.png"
                   alt="ProtectionCO professional inspecting fire safety equipment"
                   className="w-full h-full object-cover rounded-xl"
                 />
@@ -168,64 +198,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Commitment Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('commitment.heading')}
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              {t('commitment.description')}
-            </p>
-          </div>
+      <CommitmentSection t={t} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.raw('commitment.list').map((item: any, index: number) => {
-              const icons = [<Users />, <Award />, <Clock />];
-              return (
-                <div key={index} className="text-center">
-                  <div className="mx-auto mb-6 p-4 bg-primary/10 rounded-full w-fit">
-                    {icons[index]}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t('cta.heading')}
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto text-pretty">
-            {t('cta.description')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact" className="flex items-center space-x-2">
-                <Phone className="h-5 w-5" />
-                <span>{t('cta.buttons.contact')}</span>
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
-              asChild
-            >
-              <Link href="/about">{t('cta.buttons.about')}</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection t={cta} />
     </div>
   );
 }
