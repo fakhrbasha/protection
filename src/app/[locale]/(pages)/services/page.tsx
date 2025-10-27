@@ -19,7 +19,7 @@ import {
   Settings,
   Users,
 } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 export default function ServicesPage() {
   const services = [

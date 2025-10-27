@@ -1,9 +1,9 @@
 {
    "Home": {
     "hero": {
-      "badge": "Established 2008 • Trusted in Egypt",
+      "badge": "Established 2020 • Trusted in Egypt",
       "title": "Limitless <span>Protection</span>  for Life and Property",
-      "subtitle": "Leading fire protection and safety equipment company in Egypt, specializing in comprehensive firefighting systems, security solutions, and life safety equipment since 2008.",
+      "subtitle": "Leading fire protection and safety equipment company in Egypt, specializing in comprehensive firefighting systems, security solutions, and life safety equipment since 2020.",
       "buttons": {
         "quote": "Get Free Quote",
         "services": "Our Services"
@@ -85,7 +85,8 @@
    "About": {
     "hero": {
       "badge": "About Protection",
-      "title": "Leading Egypt's Fire Protection Industry Since <span>2008</span>",
+      "button":"Get a Free Consultation",
+      "title": "Leading Egypt's Fire Protection Industry Since <span>2020</span>",
       "subtitle": "Safety Equipment Service Company (Protection) is a fast-growing company established in Sadat City, Egypt, dedicated to serving the HSE field, especially fire protection departments, to save lives and properties."
     },
     "story": {
@@ -339,7 +340,7 @@
   },
    "Footer": {
     "company": {
-      "description": "Safety Equipment Service Company - Your trusted partner in fire protection and safety solutions since 2008."
+      "description": "Safety Equipment Service Company - Your trusted partner in fire protection and safety solutions since 2020."
     },
     "quickLinks": "Quick Links",
     "links": {
@@ -359,5 +360,67 @@
     "phone": "+20 101 1006 205",
     "email": "info@Protection4safety-egypt.com",
     "rights": "All rights reserved."
+  },
+  "CTA": {
+    "heading": "Your Safety is Our Mission",
+    "description": "Trust the experts in fire protection to keep your business and your people safe. We provide 24/7 solutions to prevent and control fire hazards.",
+    "buttons": {
+      "contact": "Get a Free Consultation",
+      "about": "Learn More About Us"
+    }
+  },
+  "browse": {
+    "heading": "Browse Our Products",
+    "subheading" : "Explore our high-quality fire protection systems and equipment designed to ensure maximum safety and reliability",
+    "view": "View Details",
+    "products": {
+      "extinguishers": "Fire Extinguishers",
+      "detectors": "Smoke Detectors",
+      "panels": "Fire Alarm Panels",
+      "sprinklers": "Sprinkler Systems"
+    }
+  },
+  "FireSystemProtection":{
+
+  "hero": {
+    "title": "Fire Protection System Solutions",
+    "description": "Integrated, intelligent, and reliable fire protection systems engineered for maximum safety and performance.",
+    "buttons": {
+      "consultation": "Get a Free Consultation",
+      "projects": "View Our Work"
+    }
+  },
+  "process": {
+    "heading": "Our Implementation Process",
+    "description": "A systematic approach ensuring successful deployment of your fire protection system"
+  },
+  "processSteps": [
+    { "step": "01", "title": "Site Assessment", "description": "Comprehensive evaluation of your facility's fire protection needs and risk factors" },
+    { "step": "02", "title": "System Design", "description": "Custom engineering design tailored to your specific requirements and local codes" },
+    { "step": "03", "title": "Installation", "description": "Professional installation by certified technicians with minimal disruption" },
+    { "step": "04", "title": "Commissioning", "description": "Complete system testing and commissioning to ensure optimal performance" },
+    { "step": "05", "title": "Training", "description": "Comprehensive training for your staff on system operation and maintenance" },
+    { "step": "06", "title": "Support", "description": "Ongoing maintenance and support to ensure continued system reliability" }
+  ],
+  "why": {
+    "heading": "Why Choose Our Fire Protection Systems?",
+    "description": "Trusted by leading organizations for innovative and reliable fire protection solutions"
+  },
+  "features": [
+    { "icon": "Shield", "title": "Integrated Approach", "desc": "Complete system integration ensuring all components work seamlessly together." },
+    { "icon": "Settings", "title": "Custom Engineering", "desc": "Tailored designs specific to your building and operational needs." },
+    { "icon": "Users", "title": "Expert Team", "desc": "Certified engineers and technicians with proven experience." },
+    { "icon": "Award", "title": "Proven Results", "desc": "Successful installations across multiple sectors and environments." },
+    { "icon": "CheckCircle", "title": "Quality Assurance", "desc": "Rigorous testing ensures peak performance and long-term reliability." },
+    { "icon": "Settings", "title": "Ongoing Support", "desc": "Continuous maintenance and support to keep your system ready 24/7." }
+  ],
+  "cta": {
+    "heading": "Ready to Upgrade Your Fire Protection System?",
+    "description": "Let our expert engineers design and implement a complete fire protection solution tailored to your building’s safety needs.",
+    "buttons": {
+      "consultation": "Book a Consultation",
+      "maintenance": "Learn About Maintenance"
+    }
   }
+}
 }
