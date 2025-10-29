@@ -42,17 +42,8 @@ export function Navigation() {
         { href: '/services/regular-maintenance', label: t('maintenance') },
       ],
     },
-    {
-      dropdown: 'products',
-      label: t('product'),
-      items: [
-        {
-          href: '/products/protection-fire-product',
-          label: t('protection-fire-product'),
-        },
-        { href: '/products/global-fire', label: t('global-fire') },
-      ],
-    },
+
+    { href: '/products', label: t('product') },
     { href: '/projects', label: t('projects') },
     { href: '/clients', label: t('client') },
     { href: '/careers', label: t('careers') },

@@ -20,127 +20,22 @@ import {
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export default function RegularMaintenancePage() {
-  const maintenanceServices = [
-    {
-      title: 'Preventive Maintenance',
-      description:
-        'Scheduled maintenance to prevent system failures and ensure optimal performance.',
-      frequency: 'Monthly/Quarterly',
-      includes: [
-        'System Inspection',
-        'Component Testing',
-        'Performance Verification',
-        'Documentation',
-      ],
-      benefits: [
-        'Prevents Failures',
-        'Extends Equipment Life',
-        'Maintains Compliance',
-        'Reduces Costs',
-      ],
-    },
-    {
-      title: 'Emergency Repairs',
-      description:
-        '24/7 emergency repair services to restore your fire protection systems quickly.',
-      frequency: 'As Needed',
-      includes: [
-        'Rapid Response',
-        'Fault Diagnosis',
-        'Component Replacement',
-        'System Restoration',
-      ],
-      benefits: [
-        'Minimal Downtime',
-        'Expert Technicians',
-        'Genuine Parts',
-        'Quick Resolution',
-      ],
-    },
-    {
-      title: 'Annual Inspections',
-      description:
-        'Comprehensive annual inspections to ensure compliance with local fire codes.',
-      frequency: 'Annually',
-      includes: [
-        'Full System Testing',
-        'Code Compliance Check',
-        'Performance Report',
-        'Certification',
-      ],
-      benefits: [
-        'Legal Compliance',
-        'Insurance Requirements',
-        'Safety Assurance',
-        'Official Documentation',
-      ],
-    },
-  ];
+  const t = useTranslations('maintenance');
 
-  const maintenancePlans = [
-    {
-      name: 'Basic Plan',
-      price: 'Starting from $200/month',
-      features: [
-        'Quarterly Inspections',
-        'Basic System Testing',
-        'Emergency Call-out',
-        'Annual Compliance Report',
-        'Phone Support',
-      ],
-      ideal: 'Small Buildings',
-    },
-    {
-      name: 'Professional Plan',
-      price: 'Starting from $500/month',
-      features: [
-        'Monthly Inspections',
-        'Comprehensive Testing',
-        'Priority Emergency Response',
-        'Detailed Reporting',
-        'Remote Monitoring',
-        'Staff Training',
-      ],
-      ideal: 'Commercial Buildings',
-      popular: true,
-    },
-    {
-      name: 'Enterprise Plan',
-      price: 'Custom Pricing',
-      features: [
-        'Weekly Inspections',
-        'Advanced Diagnostics',
-        '24/7 Monitoring',
-        'Dedicated Account Manager',
-        'Predictive Maintenance',
-        'Custom SLA',
-      ],
-      ideal: 'Large Facilities',
-    },
-  ];
-
-  const maintenanceChecklist = [
-    'Fire Alarm Panel Testing',
-    'Smoke Detector Cleaning',
-    'Sprinkler Head Inspection',
-    'Fire Pump Testing',
-    'Emergency Lighting Check',
-    'Exit Sign Verification',
-    'Fire Extinguisher Service',
-    'CCTV System Check',
-    'Battery Backup Testing',
-    'Documentation Update',
-  ];
+  const maintenanceServices = t.raw('services');
+  const maintenancePlans = t.raw('plans');
+  const maintenanceChecklist = t.raw('checklist');
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* 🧰 Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
         <Image
           src="/image/Hero1.png"
-          alt="Fire System Maintenance"
+          alt={t('heroAlt')}
           fill
           priority
           className="object-cover"
@@ -151,12 +46,11 @@ export default function RegularMaintenancePage() {
           <div className="flex items-center justify-center mb-4">
             <Settings className="h-12 w-12 text-red-500 mr-3" />
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Regular Maintenance
+              {t('heroTitle')}
             </h1>
           </div>
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-            Keep your fire protection systems operating at peak performance with
-            our comprehensive maintenance services.
+            {t('heroSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -164,7 +58,7 @@ export default function RegularMaintenancePage() {
               size="lg"
               className="text-lg px-8 bg-red-600 hover:bg-red-700 text-white"
             >
-              <Link href="/contact">Request Maintenance</Link>
+              <Link href="/contact">{t('heroBtn1')}</Link>
             </Button>
             <Button
               asChild
@@ -172,27 +66,26 @@ export default function RegularMaintenancePage() {
               size="lg"
               className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-black"
             >
-              <Link href="/services">View All Services</Link>
+              <Link href="/services">{t('heroBtn2')}</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Maintenance Services */}
+      {/* 🧯 Maintenance Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Maintenance Services
+              {t('servicesTitle')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive maintenance solutions to ensure your fire protection
-              systems remain reliable and compliant
+              {t('servicesSubtitle')}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {maintenanceServices.map((service, index) => (
+            {maintenanceServices.map((service: any, index: number) => (
               <Card
                 key={index}
                 className="hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20"
@@ -214,37 +107,36 @@ export default function RegularMaintenancePage() {
                 <CardContent>
                   <div className="mb-6">
                     <h4 className="font-semibold text-foreground mb-3">
-                      Includes:
+                      {t('includes')}
                     </h4>
                     <ul className="space-y-2">
-                      {service.includes.map((item, itemIndex) => (
-                        <li
-                          key={itemIndex}
-                          className="flex items-center space-x-2 text-sm"
-                        >
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                          <span className="text-muted-foreground">{item}</span>
-                        </li>
-                      ))}
+                      {service.includes.map(
+                        (item: string, itemIndex: number) => (
+                          <li
+                            key={itemIndex}
+                            className="flex items-center space-x-2 text-sm"
+                          >
+                            <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                            <span className="text-muted-foreground">
+                              {item}
+                            </span>
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
                   <div className="mb-6">
                     <h4 className="font-semibold text-foreground mb-3">
-                      Benefits:
+                      {t('benefits')}
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <Badge
-                          key={benefitIndex}
-                          variant="outline"
-                          className="text-xs"
-                        >
+                      {service.benefits.map((benefit: string, i: number) => (
+                        <Badge key={i} variant="outline" className="text-xs">
                           {benefit}
                         </Badge>
                       ))}
                     </div>
                   </div>
-                  <Button className="w-full">Learn More</Button>
                 </CardContent>
               </Card>
             ))}
@@ -252,22 +144,21 @@ export default function RegularMaintenancePage() {
         </div>
       </section>
 
-      {/* Maintenance Checklist */}
+      {/* 🧾 Maintenance Checklist */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Comprehensive Maintenance Checklist
+                {t('checklistTitle')}
               </h2>
               <p className="text-lg text-muted-foreground">
-                Our thorough maintenance process covers all aspects of your fire
-                protection systems
+                {t('checklistSubtitle')}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-              {maintenanceChecklist.map((item, index) => (
+              {maintenanceChecklist.map((item: string, index: number) => (
                 <div
                   key={index}
                   className="flex items-center space-x-3 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors"
@@ -283,53 +174,33 @@ export default function RegularMaintenancePage() {
         </div>
       </section>
 
-      {/* Emergency Support */}
+      {/* ☎️ Emergency Support */}
       <section className="py-20 bg-primary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center mb-6">
               <Phone className="h-12 w-12 text-primary mr-4" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                24/7 Emergency Support
+                {t('emergencyTitle')}
               </h2>
             </div>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Fire protection systems can't wait for business hours. Our
-              emergency support team is available 24/7 to respond to critical
-              issues.
+              {t('emergencySubtitle')}
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <Card className="text-center">
-                <CardHeader>
-                  <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">Rapid Response</CardTitle>
-                  <CardDescription>
-                    Average response time under 2 hours
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-              <Card className="text-center">
-                <CardHeader>
-                  <Settings className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">Expert Technicians</CardTitle>
-                  <CardDescription>
-                    Certified professionals available 24/7
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-              <Card className="text-center">
-                <CardHeader>
-                  <AlertTriangle className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-lg">Priority Service</CardTitle>
-                  <CardDescription>
-                    Emergency calls get highest priority
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              {t.raw('emergencyCards').map((card: any, i: number) => (
+                <Card className="text-center" key={i}>
+                  <CardHeader>
+                    {[<Clock />, <Settings />, <AlertTriangle />][i]}
+                    <CardTitle className="text-lg mt-2">{card.title}</CardTitle>
+                    <CardDescription>{card.desc}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8">
-                Emergency Hotline: +20 123 456 789
+                {t('emergencyHotline')}
               </Button>
               <Button
                 asChild
@@ -337,22 +208,18 @@ export default function RegularMaintenancePage() {
                 size="lg"
                 className="text-lg px-8 bg-transparent"
               >
-                <Link href="/contact">Schedule Maintenance</Link>
+                <Link href="/contact">{t('emergencyBtn')}</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 🚨 CTA Section */}
       <section className="relative py-24 overflow-hidden">
-        {/* 🎨 Animated Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-foreground/30 dark:from-primary dark:via-primary/80 dark:to-primary-foreground/20 animate-gradient-slow" />
-
-        {/* 🟪 Overlay for contrast */}
         <div className="absolute inset-0 bg-black/30 mix-blend-multiply" />
 
-        {/* ✨ Content */}
         <div className="relative container mx-auto px-4 text-center text-primary-foreground">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -360,18 +227,13 @@ export default function RegularMaintenancePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {/* 🏷 Heading */}
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
-              Don’t Wait for System Failure
+              {t('ctaTitle')}
             </h2>
-
-            {/* 📝 Description */}
-            <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
-              Regular maintenance ensures reliability, safety, and compliance.
-              Let’s keep your fire protection systems always ready.
+            <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed">
+              {t('ctaSubtitle')}
             </p>
 
-            {/* 🎯 Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
@@ -380,7 +242,7 @@ export default function RegularMaintenancePage() {
                 asChild
               >
                 <Link href="/contact" className="flex items-center space-x-2">
-                  <span>Get Maintenance Quote</span>
+                  <span>{t('ctaBtn1')}</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -391,7 +253,7 @@ export default function RegularMaintenancePage() {
                 className="px-8 py-6 text-lg border-2 font-semibold border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-transparent"
                 asChild
               >
-                <Link href="/services">View All Services</Link>
+                <Link href="/services">{t('ctaBtn2')}</Link>
               </Button>
             </div>
           </motion.div>
