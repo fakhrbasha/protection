@@ -5,18 +5,18 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  '/image/project/ritzy/1.jpg',
-  '/image/project/ritzy/2.jpg',
-  '/image/project/ritzy/3.jpg',
-  '/image/project/ritzy/4.jpg',
-  '/image/project/ritzy/5.jpg',
-  '/image/project/ritzy/6.jpg',
-  '/image/project/ritzy/7.jpg',
-  '/image/project/ritzy/8.jpg',
-  '/image/project/ritzy/9.jpg',
-  '/image/project/ritzy/10.jpg',
-  '/image/project/ritzy/11.jpg',
-  '/image/project/ritzy/12.jpg',
+  '/image/Project/ritzy/1.jpg',
+  '/image/Project/ritzy/2.jpg',
+  '/image/Project/ritzy/3.jpg',
+  '/image/Project/ritzy/4.jpg',
+  '/image/Project/ritzy/5.jpg',
+  '/image/Project/ritzy/6.jpg',
+  '/image/Project/ritzy/7.jpg',
+  '/image/Project/ritzy/8.jpg',
+  '/image/Project/ritzy/9.jpg',
+  '/image/Project/ritzy/10.jpg',
+  '/image/Project/ritzy/11.jpg',
+  '/image/Project/ritzy/12.jpg',
 ];
 
 const RitzyMallPage = () => {

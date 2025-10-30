@@ -5,18 +5,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 const images = [
-  '/image/project/abd/1.jpg',
-  '/image/project/abd/2.jpg',
-  '/image/project/abd/3.jpg',
-  '/image/project/abd/4.jpg',
-  '/image/project/abd/5.jpg',
-  '/image/project/abd/6.jpg',
-  '/image/project/abd/7.jpg',
-  '/image/project/abd/8.jpg',
-  '/image/project/abd/9.jpg',
-  '/image/project/abd/10.jpg',
-  '/image/project/abd/11.jpg',
-  '/image/project/abd/12.jpg',
+  '/image/Project/abd/1.jpg',
+  '/image/Project/abd/2.jpg',
+  '/image/Project/abd/3.jpg',
+  '/image/Project/abd/4.jpg',
+  '/image/Project/abd/5.jpg',
+  '/image/Project/abd/6.jpg',
+  '/image/Project/abd/7.jpg',
+  '/image/Project/abd/8.jpg',
+  '/image/Project/abd/9.jpg',
+  '/image/Project/abd/10.jpg',
+  '/image/Project/abd/11.jpg',
+  '/image/Project/abd/12.jpg',
 ];
 
 const Masna3ElAbdPage = () => {

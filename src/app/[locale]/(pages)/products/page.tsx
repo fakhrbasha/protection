@@ -228,6 +228,7 @@ export default function ProductsPage() {
   const [openPdf, setOpenPdf] = useState<{ src: string; title: string } | null>(
     null
   );
+  const tt = useTranslations('About');
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpenPdf(null);
@@ -264,7 +265,7 @@ export default function ProductsPage() {
               size="lg"
               className="bg-white text-red-700 hover:bg-gray-100 font-semibold px-8"
             >
-              <Link href="#catalog">{t('hero.button')}</Link>
+              <Link href="/gallery">{t('hero.button')}</Link>
             </Button>
           </div>
         </motion.div>
@@ -476,26 +477,52 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-red-700 to-red-600 text-white py-20">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <motion.h2
+
+      <section className="relative py-24 overflow-hidden">
+        {/* 🎨 Animated Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-foreground/20 animate-gradient-slow" />
+
+        {/* 🟪 Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
+
+        <div className="relative container mx-auto px-4 text-center text-primary-foreground">
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            {t('cta.title')}
-          </motion.h2>
-          <p className="text-gray-200 mb-8 max-w-2xl mx-auto">
-            {t('cta.subtitle')}
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-white text-red-700 font-semibold hover:bg-gray-100 px-8"
-          >
-            <Link href="/contact">{t('cta.button')}</Link>
-          </Button>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
+              {tt('cta.heading')}
+            </h2>
+            <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
+              {tt('cta.description')}
+            </p>
+
+            {/* 🎯 Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                asChild
+              >
+                <Link href="/services" className="flex items-center space-x-2">
+                  <span>{tt('cta.buttons.services')}</span>
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 py-6 text-lg border-2 font-semibold border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-transparent"
+                asChild
+              >
+                <Link href="/contact">{tt('cta.buttons.contact')}</Link>
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
