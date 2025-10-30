@@ -666,29 +666,42 @@
   }
 
   ,
-  "products": {
-    "heroTitle": "Fire Valves & Fire Protection Systems",
-    "heroSubtitle": "FM & UL Approved Products – Engineered for Optimal Performance.",
-    "heroButton": "View Catalogs",
-    "sectionTitle": "Our Featured Products",
-    "sectionSubtitle": "Explore technical specifications, certifications, and download product PDFs directly.",
-    "catalogButton": "View Catalog",
-    "downloadPdf": "Download PDF",
-    "whyChooseUsTitle": "Why Choose Our Products?",
-    "whyChooseUsText": "We deliver complete fire protection solutions focused on quality, reliability, and customer satisfaction. Our products are FM & UL approved and comply with international standards.",
-    "quality": "World-Class Quality",
-    "qualityText": "Each product undergoes rigorous testing to ensure maximum performance and reliability.",
-    "safety": "Certified Safety Standards",
-    "safetyText": "All our products meet ISO, FM, and UL certification standards for quality and safety.",
-    "support": "Continuous Technical Support",
-    "supportText": "Our engineering team is always ready to provide technical support and recommendations for your applications.",
-    "ctaTitle": "Don’t Wait for System Failure",
-    "ctaSubtitle": "Regular maintenance ensures reliability, safety, and compliance. Let’s keep your fire protection systems always ready.",
-    "ctaButton1": "Get Maintenance Quote",
-    "ctaButton2": "View All Services",
-    "productsList": {
-      "extraTitle": "Additional Products",
-      "extraSubtitle": "Additional range of catalog-listed fire protection products."
+ "product": {
+    "hero": {
+      "alt": "Fire protection valves",
+      "title": "Firefighting Valves & Systems Solutions",
+      "subtitle": "FM & UL certified products engineered for optimal performance.",
+      "button": "View Catalogs"
+    },
+    "catalog": {
+      "title": "Our Featured Products",
+      "subtitle": "Explore our technical product specs, certifications, and download PDF catalogs directly.",
+      "view": "View Catalog",
+      "download": "Download PDF",
+      "close": "Close"
+    },
+    "why": {
+      "title": "Why Choose Our Products?",
+      "description": "We provide integrated fire protection solutions focusing on quality, reliability, and customer service. Our FM & UL certified products meet global standards.",
+      "cards": {
+        "quality": {
+          "title": "World-Class Quality",
+          "desc": "Every product undergoes strict testing to ensure top performance and stability in any environment."
+        },
+        "safety": {
+          "title": "Certified Safety Standards",
+          "desc": "Our products are FM and UL certified, meeting ISO quality and safety standards."
+        },
+        "support": {
+          "title": "Continuous Technical Support",
+          "desc": "Our engineering team is always ready to assist you in selecting the best solution for your application."
+        }
+      }
+    },
+    "cta": {
+      "title": "Need help choosing the right product?",
+      "subtitle": "Contact us and our technical team will guide you to the best firefighting solutions for your project.",
+      "button": "Contact Us Now"
     }
   }
 }

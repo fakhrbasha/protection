@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { FileText, ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 type Product = {
   id: string;
@@ -22,227 +23,208 @@ const PRODUCTS: Product[] = [
   // ==== المنتجات الأصلية ====
   {
     id: 'A155S',
-    title_ar: 'صمام تخفيض ضغط زاوية - سلسلة A155S',
+    title_ar: 'Pressure Restricting Angle Valve - A155S Series',
     title_en: 'Pressure Restricting Angle Valve (A155S Series)',
     subtitle:
-      'صمام زاوية لتقليل الضغط مزود بنظام هيدرولاتور – مناسب لخراطيم الحريق وأنظمة المواسير الرأسية. يتضمن بيانات أداء على نمط FM/UL.',
+      'Angle valve with pressure-reducing hydrant system – suitable for fire hose and riser systems. Includes FM/UL performance data.',
     image: '/image/product/A155S.png',
     pdf: '/pdf/A155S.pdf',
     specs: [
-      { label: 'المقاس', value: '1½"' },
+      { label: 'Size', value: '1½"' },
       {
         label: 'Cv',
         value: 'Set1: 7 | Set2: 10.09 | Set3: 16.63 | F.O: 28.00',
       },
-      {
-        label: 'الوظيفة',
-        value: 'تقليل ضغط التدفق الخارج للحفاظ على الاستقرار',
-      },
-      { label: 'المعايير', value: 'ISO 9001 / ISO 14001 / OHSAS 18001' },
+      { label: 'Function', value: 'Reduce outlet flow pressure for stability' },
+      { label: 'Standards', value: 'ISO 9001 / ISO 14001 / OHSAS 18001' },
     ],
   },
   {
     id: 'J282',
-    title_ar: 'صمام تحديد ضغط الخرطوم - موديل J282',
+    title_ar: 'Pressure Restricting Hose Valve - Model J282',
     title_en: 'Pressure Restricting Hose Valve (J282)',
     subtitle:
-      'صمام لتحديد وضبط ضغط الخرطوم معتمد من FM و UL. مناسب لأنظمة المواسير الرأسية ووصلات المضخات.',
+      'FM & UL approved valve for hose pressure control. Suitable for riser systems and pump connections.',
     image: '/image/product/2.png',
     pdf: '/pdf/DOC-20220815-WA0030..pdf',
     specs: [
-      { label: 'الأحجام', value: `1½", 2½"` },
-      { label: 'أقصى ضغط تشغيل', value: '175 psi (1205 kPa)' },
-      { label: 'المادة', value: 'Bronze / Ductile Iron' },
+      { label: 'Sizes', value: `1½", 2½"` },
+      { label: 'Max Working Pressure', value: '175 psi (1205 kPa)' },
+      { label: 'Material', value: 'Bronze / Ductile Iron' },
     ],
   },
   {
     id: 'VIKING-D1-G1',
-    title_ar: 'صمام منع الرجوع - موديل D-1 & G-1',
+    title_ar: 'Rubber-faced Swing Check Valve - Model D-1 & G-1',
     title_en: 'Rubber-faced Swing Check Valve (D-1 & G-1)',
     subtitle:
-      'صمام عالي الكفاءة لمنع الرجوع لأنظمة الإطفاء – جسم من الحديد المطيل، قابل للتركيب أفقيًا أو رأسيًا، معتمد من FM و cULus.',
+      'High-performance check valve for fire protection systems – ductile iron body, can be installed horizontally or vertically, FM & cULus approved.',
     image: '/image/product/DOC.png',
     pdf: '/pdf/DOC-20220815-WA0031..pdf',
     specs: [
-      { label: 'الأحجام', value: `2½", 3", 4", 6", 8"` },
-      { label: 'أقصى ضغط تشغيل', value: '300 psi (20.7 bar)' },
-      { label: 'ضغط الاختبار', value: '600 psi (41.4 bar)' },
-      { label: 'الخامة', value: 'Ductile Iron, Rubber-faced internals' },
+      { label: 'Sizes', value: `2½", 3", 4", 6", 8"` },
+      { label: 'Max Working Pressure', value: '300 psi (20.7 bar)' },
+      { label: 'Test Pressure', value: '600 psi (41.4 bar)' },
+      { label: 'Material', value: 'Ductile Iron, Rubber-faced internals' },
     ],
   },
   {
     id: 'FG-OSY-GATE',
-    title_ar: 'صمام بوابة OS&Y - موديل FGO907',
+    title_ar: 'OS&Y Gate Valve - Model FGO907',
     title_en: 'Fireguard OS&Y Gate Valve (FGO907)',
     subtitle:
-      'صمام بوابة بنظام OS&Y، مصنوع من الحديد الزهر المطيل ومطلي بالإيبوكسي، مصمم لأنظمة مكافحة الحريق حتى ضغط 300 PSI.',
+      'OS&Y gate valve made of ductile iron with epoxy coating, designed for fire protection systems up to 300 PSI.',
     image: '/image/product/Product4.png',
     pdf: '/pdf/FG OS&Y GATE Valve.pdf',
     specs: [
-      { label: 'الضغط', value: '250 / 300 PSI' },
-      { label: 'المعيار', value: 'AWWA C509' },
-      { label: 'درجة الحرارة', value: '160°F / 71°C' },
+      { label: 'Pressure', value: '250 / 300 PSI' },
+      { label: 'Standard', value: 'AWWA C509' },
+      { label: 'Temperature', value: '160°F / 71°C' },
     ],
   },
-
-  // ==== المنتجات الجديدة من ملفات PDF ====
   {
     id: 'TY-B',
-    title_ar: 'رشاش مياه – سلسلة TY-B',
+    title_ar: 'Water Sprinkler – TY-B Series',
     title_en: 'Tyco Series TY-B Sprinkler (Upright & Pendent, K=5.6)',
     subtitle:
-      'رشاش إطفاء حريق قياسي الاستجابة والتغطية، متاح بتصميمين: رأسي ومعلق. يستخدم في المنشآت التجارية والصناعية مثل الفنادق والمصانع ومراكز التسوق.',
+      'Standard response sprinkler, available in upright and pendent designs.',
     image: '/image/product/TYP.png',
     pdf: '/pdf/مستند من Ahmed Elbably.pdf',
     specs: [
-      { label: 'النوع', value: 'Upright (TY315) / Pendent (TY325)' },
+      { label: 'Type', value: 'Upright (TY315) / Pendent (TY325)' },
       {
-        label: 'الضغط الأقصى',
-        value: '175 psi (12.1 bar) | 250 psi (17.2 bar UL فقط)',
+        label: 'Max Pressure',
+        value: '175 psi (12.1 bar) | 250 psi (17.2 bar UL only)',
       },
       {
-        label: 'درجات الحرارة',
+        label: 'Temperature Ratings',
         value: '135°F / 155°F / 175°F / 200°F / 286°F / 360°F',
       },
       {
-        label: 'الخامة',
+        label: 'Material',
         value: 'Bronze, Stainless Steel, Brass/Copper, Glass Bulb',
       },
     ],
   },
   {
     id: 'J168',
-    title_ar: 'رشاش مياه رأسي – موديل J168',
+    title_ar: 'Upright Sprinkler – Model J168',
     title_en: 'Reliable Model J168 Upright Sprinkler (K16.8)',
-    subtitle:
-      'رشاش قياسي الاستجابة والتغطية، يستخدم في أنظمة مكافحة الحرائق لتطبيقات التخزين وغير التخزين. معتمد من FM و UL.',
+    subtitle: '',
     image: '/image/product/j168.png',
     pdf: '/pdf/مستند من Aahmed Elbably.pdf',
     specs: [
-      { label: 'النمط', value: 'Upright' },
-      { label: 'الوصلة', value: '3/4” NPT or ISO 7-R3/4' },
-      { label: 'الخامة', value: 'Brass Alloy, Bronze, PTFE Seal' },
+      { label: 'Style', value: 'Upright' },
+      { label: 'Connection', value: '3/4” NPT or ISO 7-R3/4' },
+      { label: 'Material', value: 'Brass Alloy, Bronze, PTFE Seal' },
       {
-        label: 'درجات الحرارة',
+        label: 'Temperature Ratings',
         value: '165°F / 212°F / 286°F (74°C / 100°C / 141°C)',
       },
-      { label: 'الاعتمادات', value: 'FM Approved, cULus Listed' },
+      { label: 'Approvals', value: 'FM Approved, cULus Listed' },
     ],
   },
   {
     id: 'VSR-F',
-    title_ar: 'مفتاح تدفق المياه – موديل VSR-F',
+    title_ar: 'Waterflow Switch – Model VSR-F',
     title_en: 'Potter VSR-F Vane Type Waterflow Alarm Switch with Retard',
-    subtitle:
-      'مفتاح تدفق ميكانيكي يستخدم لمراقبة تدفق المياه في أنظمة الرش الآلي. يحتوي على مفتاحي SPDT ونظام تأخير هوائي قابل للتعديل.',
+    subtitle: '',
     image: '/image/product/VSR.png',
     pdf: '/pdf/مستند من Aehmed Elbably.pdf',
     specs: [
-      { label: 'الضغط التشغيلي', value: 'حتى 450 PSI (31 BAR)' },
-      { label: 'معدل التدفق الأدنى للتنبيه', value: '10 GPM (38 LPM)' },
-      { label: 'السرعة القصوى للنبضة', value: '18 FPS (5.5 m/s)' },
-      { label: 'الجهد والتيار', value: '15A عند 125/250VAC أو 2A عند 30VDC' },
-      { label: 'الأحجام المتاحة', value: '2" إلى 8" (50mm إلى 200mm)' },
-      { label: 'الاعتمادات', value: 'UL, ULC, CSFM, FM, LPCB, NYMEA, CE' },
+      { label: 'Operating Pressure', value: 'Up to 450 PSI (31 BAR)' },
+      { label: 'Min Flow Alarm Rate', value: '10 GPM (38 LPM)' },
+      { label: 'Max Surge Velocity', value: '18 FPS (5.5 m/s)' },
+      { label: 'Voltage & Current', value: '15A at 125/250VAC or 2A at 30VDC' },
+      { label: 'Available Sizes', value: '2" to 8" (50mm to 200mm)' },
+      { label: 'Approvals', value: 'UL, ULC, CSFM, FM, LPCB, NYMEA, CE' },
     ],
   },
-
-  // ==== المنتجات المستخرجة من ملفات PDF الجديدة ====
   {
     id: 'R250D-U',
-    title_ar: 'صمام كروي نحاسي - موديل R250D-U',
+    title_ar: 'Brass Ball Valve - Model R250D-U',
     title_en: 'Giacomini R250D-U Brass Ball Valve',
-    subtitle:
-      'صمام كروي بنهايات لولبية داخلية (NPT). مناسب لأنظمة المياه للتدفئة والتبريد والغازات غير الخطرة والهيدروكربونات السائلة. يتميز بمقبض فولاذي مطلي ضد التآكل وساق مزدوج الحلقات.',
+    subtitle: 'Brass ball valve with internal threaded ends (NPT).',
     image: '/image/product/R250D.png',
     pdf: '/pdf/مستند من Ahmed Elbagbly.pdf',
     specs: [
-      { label: 'المادة', value: 'Brass UNI EN 12165 CW617N' },
-      { label: 'درجات الحرارة', value: '-20°C إلى 185°C' },
+      { label: 'Material', value: 'Brass UNI EN 12165 CW617N' },
+      { label: 'Temperature Range', value: '-20°C to 185°C' },
       {
-        label: 'الضغط الأقصى',
-        value:
-          '42 بار (1/4” إلى 3/4”)، 35 بار (1” إلى 2”)، 28 بار (2½” إلى 4”)',
+        label: 'Max Pressure',
+        value: '42 bar (1/4”–3/4”), 35 bar (1”–2”), 28 bar (2½”–4”)',
       },
       {
-        label: 'الاستخدام',
-        value: 'ماء، غازات غير خطرة، هيدروكربونات سائلة',
+        label: 'Application',
+        value: 'Water, non-hazardous gases, liquid hydrocarbons',
       },
-      { label: 'الاعتمادات', value: 'Giacomini S.p.A – إيطاليا' },
+      { label: 'Manufacturer', value: 'Giacomini S.p.A – Italy' },
     ],
   },
   {
     id: 'J282-NEW',
-    title_ar: 'صمام تحديد ضغط الخرطوم - موديل J282 (موسع)',
+    title_ar: 'Pressure Restricting Hose Valve - Model J282 (Extended)',
     title_en: 'Pressure Restricting Hose Valve (Model J282)',
-    subtitle:
-      'صمام زاوية لتحديد ضغط المياه في أنظمة مكافحة الحرائق، متاح بمقاسات 1½ بوصة و2½ بوصة. معتمد من FM وUL ومناسب لضغوط التشغيل حتى 175 psi.',
+    subtitle: '',
     image: '/image/product/J282.png',
     pdf: '/pdf/مستند من Ahmefd Elbably.pdf',
     specs: [
-      { label: 'المقاسات', value: '1½", 2½"' },
-      { label: 'الضغط الأقصى للتشغيل', value: '175 psi (1205 kPa)' },
-      {
-        label: 'نوع التوصيل',
-        value: 'Female × Male أو Female × Female',
-      },
-      {
-        label: 'الشركة المصنعة',
-        value: 'Ningbo Huacheng Valve Co. Ltd – الصين',
-      },
-      { label: 'الاعتمادات', value: 'FM Approved, UL Listed' },
+      { label: 'Sizes', value: '1½", 2½"' },
+      { label: 'Max Working Pressure', value: '175 psi (1205 kPa)' },
+      { label: 'Connection Type', value: 'Female × Male or Female × Female' },
+      { label: 'Manufacturer', value: 'Ningbo Huacheng Valve Co. Ltd – China' },
+      { label: 'Approvals', value: 'FM Approved, UL Listed' },
     ],
   },
   {
     id: 'VIKING-D1-G1-NEW',
-    title_ar: 'صمام منع الرجوع - موديل D-1 & G-1 (Viking)',
+    title_ar: 'Swing Check Valve - Model D-1 & G-1 (Viking)',
     title_en: 'Viking Swing Check Valve (Models D-1 & G-1)',
-    subtitle:
-      'صمام منع رجوع مطاطي عالي الكفاءة من شركة Viking، مصنوع من الحديد المطيل ومناسب لأنظمة مكافحة الحريق. يمكن تركيبه أفقيًا أو رأسيًا.',
+    subtitle: '',
     image: '/image/product/viking.png',
     pdf: '/pdf/مستند منs Ahmed Elbably.pdf',
     specs: [
-      { label: 'الأحجام', value: '2½", 3", 4", 6", 8"' },
-      { label: 'الضغط الأقصى للتشغيل', value: '300 psi (20.7 bar)' },
-      { label: 'الضغط الاختباري', value: '600 psi (41.4 bar)' },
+      { label: 'Sizes', value: '2½", 3", 4", 6", 8"' },
+      { label: 'Max Working Pressure', value: '300 psi (20.7 bar)' },
+      { label: 'Test Pressure', value: '600 psi (41.4 bar)' },
       {
-        label: 'الخامة',
+        label: 'Material',
         value: 'Ductile Iron Body, Brass Seat, Rubber-faced Clapper',
       },
       {
-        label: 'الاعتمادات',
+        label: 'Approvals',
         value: 'FM Approved, UL Listed, NYC MEA 89-92-E Vol. XI',
       },
     ],
   },
-  // ==== كروت إضافية (بدون صور) ====
   {
     id: 'EXTRA-1',
-    title_ar: 'منتجات إضافية',
+    title_ar: 'Additional Products',
     title_en: 'Additional Products',
-    subtitle: 'مجموعة إضافية من المنتجات المدرجة ضمن ملفات الكتالوج.',
+    subtitle: 'Additional group of products listed in catalog files.',
     pdf: '/pdf/big.pdf',
     specs: [],
   },
   {
     id: 'EXTRA-2',
-    title_ar: 'منتجات إضافية',
+    title_ar: 'Additional Products',
     title_en: 'Additional Products',
-    subtitle: 'مجموعة إضافية من المنتجات المدرجة ضمن ملفات الكتالوج.',
+    subtitle: 'Additional group of products listed in catalog files.',
     pdf: '/pdf/big2.pdf',
     specs: [],
   },
   {
     id: 'EXTRA-3',
-    title_ar: 'منتجات إضافية',
+    title_ar: 'Additional Products',
     title_en: 'Additional Products',
-    subtitle: 'مجموعة إضافية من المنتجات المدرجة ضمن ملفات الكتالوج.',
+    subtitle: 'Additional group of products listed in catalog files.',
     pdf: '/pdf/big3.pdf',
     specs: [],
   },
 ];
 
 export default function ProductsPage() {
+  const t = useTranslations('product');
   const [openPdf, setOpenPdf] = useState<{ src: string; title: string } | null>(
     null
   );
@@ -259,7 +241,7 @@ export default function ProductsPage() {
       <section className="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
         <Image
           src="/image/careHero.png"
-          alt="Fire protection valves"
+          alt={t('hero.alt')}
           fill
           className="object-cover brightness-[0.65]"
         />
@@ -271,10 +253,10 @@ export default function ProductsPage() {
           className="relative z-10 text-white px-6"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
-            حلول الصمامات وأنظمة مكافحة الحريق
+            {t('hero.title')}
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            منتجات معتمدة من FM & UL – تصميم هندسي لضمان الأداء الأمثل.
+            {t('hero.subtitle')}
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Button
@@ -282,7 +264,7 @@ export default function ProductsPage() {
               size="lg"
               className="bg-white text-red-700 hover:bg-gray-100 font-semibold px-8"
             >
-              <Link href="#catalog">عرض الكتالوجات</Link>
+              <Link href="#catalog">{t('hero.button')}</Link>
             </Button>
           </div>
         </motion.div>
@@ -293,11 +275,10 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              منتجاتنا المميزة
+              {t('catalog.title')}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              اكتشف مواصفات منتجاتنا الفنية، الاعتمادات، وقم بتحميل كتالوج PDF
-              مباشرة.
+              {t('catalog.subtitle')}
             </p>
           </div>
 
@@ -362,14 +343,15 @@ export default function ProductsPage() {
                             className="bg-red-600 hover:bg-red-700 text-white flex items-center gap-2"
                           >
                             <FileText className="w-4 h-4" />
-                            عرض الكتالوج
+                            {t('catalog.view')}
                           </Button>
                           <a
                             href={p.pdf}
                             download
                             className="inline-flex items-center gap-2 text-sm font-medium text-red-700 hover:text-red-800"
                           >
-                            تحميل PDF <ArrowRight className="w-4 h-4" />
+                            {t('catalog.download')}{' '}
+                            <ArrowRight className="w-4 h-4" />
                           </a>
                         </div>
                       </div>
@@ -398,14 +380,15 @@ export default function ProductsPage() {
                           className="bg-red-600 hover:bg-red-700 text-white flex items-center gap-2"
                         >
                           <FileText className="w-4 h-4" />
-                          عرض الكتالوج
+                          {t('catalog.view')}
                         </Button>
                         <a
                           href={p.pdf}
                           download
                           className="inline-flex items-center gap-2 text-sm font-medium text-red-700 hover:text-red-800"
                         >
-                          تحميل PDF <ArrowRight className="w-4 h-4" />
+                          {t('catalog.download')}{' '}
+                          <ArrowRight className="w-4 h-4" />
                         </a>
                       </div>
                     </div>
@@ -441,13 +424,13 @@ export default function ProductsPage() {
                     download
                     className="px-3 py-1 rounded bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-sm"
                   >
-                    تحميل
+                    {t('catalog.download')}
                   </a>
                   <button
                     onClick={() => setOpenPdf(null)}
                     className="px-3 py-1 rounded bg-red-600 hover:bg-red-700 text-white text-sm"
                   >
-                    إغلاق
+                    {t('catalog.close')}
                   </button>
                 </div>
               </div>
@@ -463,62 +446,36 @@ export default function ProductsPage() {
           </div>
         )}
       </AnimatePresence>
-      {/* SECTIONS AFTER PRODUCTS */}
+
+      {/* WHY SECTION */}
       <section className="bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-950 py-20 mt-10">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-            لماذا تختار منتجاتنا؟
+            {t('why.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12">
-            نحن نقدم حلولًا متكاملة في مجال أنظمة مكافحة الحريق، مع التركيز على
-            الجودة، الاعتمادية، وخدمة العملاء المتميزة. منتجاتنا معتمدة من FM و
-            UL وتتماشى مع أعلى المعايير العالمية.
+            {t('why.description')}
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md"
-            >
-              <h3 className="text-xl font-semibold text-red-600 mb-2">
-                جودة عالمية
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                كل منتج يخضع لاختبارات صارمة لضمان أعلى أداء واستقرار في بيئات
-                العمل المختلفة.
-              </p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md"
-            >
-              <h3 className="text-xl font-semibold text-red-600 mb-2">
-                معايير سلامة معتمدة
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                منتجاتنا معتمدة من FM و UL وتفي بمعايير ISO للجودة وسلامة
-                الاستخدام.
-              </p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md"
-            >
-              <h3 className="text-xl font-semibold text-red-600 mb-2">
-                دعم فني مستمر
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                فريقنا الهندسي جاهز دائمًا لتقديم الدعم الفني والمشورة لاختيار
-                الأنسب لتطبيقك.
-              </p>
-            </motion.div>
+            {['quality', 'safety', 'support'].map((key) => (
+              <motion.div
+                key={key}
+                whileHover={{ y: -5 }}
+                className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md"
+              >
+                <h3 className="text-xl font-semibold text-red-600 mb-2">
+                  {t(`why.cards.${key}.title`)}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {t(`why.cards.${key}.desc`)}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
+      {/* CTA */}
       <section className="bg-gradient-to-r from-red-700 to-red-600 text-white py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <motion.h2
@@ -527,18 +484,17 @@ export default function ProductsPage() {
             transition={{ duration: 0.7 }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            هل تحتاج إلى مساعدة في اختيار المنتج المناسب؟
+            {t('cta.title')}
           </motion.h2>
           <p className="text-gray-200 mb-8 max-w-2xl mx-auto">
-            تواصل معنا وسيساعدك فريقنا الفني في تحديد أفضل الحلول لأنظمة مكافحة
-            الحريق لمشروعك.
+            {t('cta.subtitle')}
           </p>
           <Button
             asChild
             size="lg"
             className="bg-white text-red-700 font-semibold hover:bg-gray-100 px-8"
           >
-            <Link href="/contact">تواصل معنا الآن</Link>
+            <Link href="/contact">{t('cta.button')}</Link>
           </Button>
         </div>
       </section>
