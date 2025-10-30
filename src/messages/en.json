@@ -422,5 +422,273 @@
       "maintenance": "Learn About Maintenance"
     }
   }
-}
+},
+  "fireAlarm": {
+    "heroTitle": "Fire Alarm Systems",
+    "heroSubtitle": "Intelligent fire detection and alarm solutions providing early warning and life safety for all environments.",
+    "getQuote": "Get Fire Alarm Quote",
+    "maintenance": "Maintenance Services",
+    "typesTitle": "Fire Alarm System Types",
+    "typesSubtitle": "Choose from our range of fire alarm systems designed for different building sizes and applications.",
+    "keyFeatures": "Key Features",
+    "bestFor": "Best For",
+    "detectionTitle": "Detection Technologies",
+    "detectionSubtitle": "Advanced detection technologies ensuring rapid and accurate fire identification.",
+    "featuresTitle": "Advanced System Features",
+    "featuresSubtitle": "Our fire alarm systems include comprehensive features for complete life safety protection.",
+    "installationTitle": "Professional Installation Process",
+    "installationSubtitle": "Certified technicians ensure precise installation and testing for maximum system performance.",
+    "installationSteps": ["Site Survey", "System Design", "Installation", "Testing"],
+    "installationDescriptions": [
+      "Detailed assessment of site and fire safety needs.",
+      "Custom design following codes and requirements.",
+      "Professional installation by experts.",
+      "Full testing and commissioning before delivery."
+    ],
+    "ctaTitle": "Protect Your Building with Advanced Fire Alarms",
+    "ctaSubtitle": "Don’t wait for a fire emergency — install a reliable alarm system today to safeguard lives and assets.",
+    "ctaQuote": "Request a Quote",
+    "ctaMaintenance": "Maintenance Services",
+    "systems": [
+      {
+        "title": "Conventional Fire Alarm Systems",
+        "desc": "Reliable and cost-effective fire alarm systems ideal for smaller buildings and straightforward applications.",
+        "features": ["Zone-based Detection", "Manual Call Points", "Audible/Visual Alarms", "Battery Backup"],
+        "apps": ["Small Offices", "Retail Stores", "Restaurants", "Small Warehouses"]
+      },
+      {
+        "title": "Addressable Fire Alarm Systems",
+        "desc": "Advanced intelligent fire alarm systems providing precise location identification and enhanced control.",
+        "features": ["Individual Device Addressing", "Precise Location ID", "Advanced Diagnostics", "Remote Monitoring"],
+        "apps": ["Large Buildings", "Hospitals", "Hotels", "Shopping Centers"]
+      },
+      {
+        "title": "Wireless Fire Alarm Systems",
+        "desc": "Flexible wireless fire alarm solutions perfect for heritage buildings and retrofit applications.",
+        "features": ["No Wiring Required", "Easy Installation", "Mesh Network", "Battery Powered"],
+        "apps": ["Historic Buildings", "Temporary Structures", "Retrofit Projects", "Remote Locations"]
+      }
+    ],
+    "detectionTypes": [
+      { "name": "Smoke Detectors", "desc": "Advanced photoelectric and ionization smoke detection technology" },
+      { "name": "Heat Detectors", "desc": "Fixed temperature and rate-of-rise heat detection systems" },
+      { "name": "Flame Detectors", "desc": "UV/IR flame detection for rapid fire identification" },
+      { "name": "Gas Detectors", "desc": "Specialized gas detection for industrial applications" }
+    ],
+    "systemFeatures": [
+      "Early Fire Detection",
+      "Mass Notification",
+      "Emergency Communication",
+      "Evacuation Management",
+      "Integration with Building Systems",
+      "Remote Monitoring Capability",
+      "Maintenance Alerts",
+      "Compliance Reporting"
+    ]
+  }
+,"maintenance": {
+    "heroTitle": "Regular Maintenance",
+    "heroSubtitle": "Keep your fire protection systems operating at peak performance with our comprehensive maintenance services.",
+    "heroAlt": "Fire System Maintenance",
+    "heroBtn1": "Request Maintenance",
+    "heroBtn2": "View All Services",
+
+    "servicesTitle": "Our Maintenance Services",
+    "servicesSubtitle": "Comprehensive maintenance solutions to ensure your fire protection systems remain reliable and compliant.",
+
+    "includes": "Includes",
+    "benefits": "Benefits",
+
+    "checklistTitle": "Comprehensive Maintenance Checklist",
+    "checklistSubtitle": "Our thorough maintenance process covers all aspects of your fire protection systems.",
+
+    "emergencyTitle": "24/7 Emergency Support",
+    "emergencySubtitle": "Fire protection systems can't wait for business hours. Our emergency support team is available 24/7 to respond to critical issues.",
+
+    "emergencyHotline": "Emergency Hotline: +20 123 456 789",
+    "emergencyBtn": "Schedule Maintenance",
+
+    "ctaTitle": "Don’t Wait for System Failure",
+    "ctaSubtitle": "Regular maintenance ensures reliability, safety, and compliance. Let’s keep your fire protection systems always ready.",
+    "ctaBtn1": "Get Maintenance Quote",
+    "ctaBtn2": "View All Services",
+
+    "services": [
+      {
+        "title": "Preventive Maintenance",
+        "description": "Scheduled maintenance to prevent system failures and ensure optimal performance.",
+        "frequency": "Monthly/Quarterly",
+        "includes": [
+          "System Inspection",
+          "Component Testing",
+          "Performance Verification",
+          "Documentation"
+        ],
+        "benefits": [
+          "Prevents Failures",
+          "Extends Equipment Life",
+          "Maintains Compliance",
+          "Reduces Costs"
+        ]
+      },
+      {
+        "title": "Emergency Repairs",
+        "description": "24/7 emergency repair services to restore your fire protection systems quickly.",
+        "frequency": "As Needed",
+        "includes": [
+          "Rapid Response",
+          "Fault Diagnosis",
+          "Component Replacement",
+          "System Restoration"
+        ],
+        "benefits": [
+          "Minimal Downtime",
+          "Expert Technicians",
+          "Genuine Parts",
+          "Quick Resolution"
+        ]
+      },
+      {
+        "title": "Annual Inspections",
+        "description": "Comprehensive annual inspections to ensure compliance with local fire codes.",
+        "frequency": "Annually",
+        "includes": [
+          "Full System Testing",
+          "Code Compliance Check",
+          "Performance Report",
+          "Certification"
+        ],
+        "benefits": [
+          "Legal Compliance",
+          "Insurance Requirements",
+          "Safety Assurance",
+          "Official Documentation"
+        ]
+      }
+    ],
+
+    "checklist": [
+      "Fire Alarm Panel Testing",
+      "Smoke Detector Cleaning",
+      "Sprinkler Head Inspection",
+      "Fire Pump Testing",
+      "Emergency Lighting Check",
+      "Exit Sign Verification",
+      "Fire Extinguisher Service",
+      "CCTV System Check",
+      "Battery Backup Testing",
+      "Documentation Update"
+    ],
+
+    "emergencyCards": [
+      {
+        "title": "Rapid Response",
+        "desc": "Average response time under 2 hours"
+      },
+      {
+        "title": "Expert Technicians",
+        "desc": "Certified professionals available 24/7"
+      },
+      {
+        "title": "Priority Service",
+        "desc": "Emergency calls get highest priority"
+      }
+    ]
+  },
+  "services": {
+    "pageTitle": "Services",
+    "heroBadge": "Our Services",
+    "heroTitle": "Comprehensive Fire Protection &",
+    "heroHighlight": "Safety Solutions",
+    "heroSubtitle": "From design and installation to maintenance and support, Protectionprovides complete fire protection and security solutions tailored to your specific needs.",
+    "coreTitle": "Our Core Services",
+    "coreSubtitle": "Specialized solutions designed to protect lives and property with cutting-edge technology and expertise.",
+    "industriesTitle": "Industries We Serve",
+    "industriesSubtitle": "Our expertise spans across various industries, providing tailored solutions for each sector's unique requirements.",
+    "processTitle": "Our Process",
+    "processSubtitle": "A systematic approach ensuring quality delivery from initial consultation to ongoing support.",
+    "ctaTitle": "Ready to Protect Your Assets?",
+    "ctaSubtitle": "Contact our experts today for a comprehensive consultation and customized fire protection solution.",
+    "ctaBtn1": "Get Free Consultation",
+    "ctaBtn2": "View Our Work",
+    "items": [
+      {
+        "icon": "Flame",
+        "title": "Fire Fighting Systems",
+        "description": "Complete firefighting solutions including sprinkler systems, foam systems, and fire suppression.",
+        "features": ["Wet & Dry Sprinkler Systems", "Foam Fire Suppression", "CO2 Fire Suppression", "FM200 Systems", "Water Mist Systems", "Fire Hydrant Systems"]
+      },
+      {
+        "icon": "Bell",
+        "title": "Fire Alarm Systems",
+        "description": "Advanced fire detection and alarm systems for early warning and emergency response.",
+        "features": ["Addressable Systems", "Conventional Systems", "Smoke Detection", "Heat Detection", "Manual Call Points", "Emergency Voice Systems"]
+      },
+      {
+        "icon": "Camera",
+        "title": "CCTV & Security Systems",
+        "description": "Comprehensive security solutions with advanced surveillance and monitoring capabilities.",
+        "features": ["IP Cameras", "Analog CCTV", "Access Control", "Video Management", "Remote Monitoring", "Security Integration"]
+      },
+      {
+        "icon": "Settings",
+        "title": "Installation & Commissioning",
+        "description": "Professional installation and commissioning ensuring optimal system performance.",
+        "features": ["System Design", "Installation", "Testing", "Commissioning", "Documentation", "Training"]
+      },
+      {
+        "icon": "Wrench",
+        "title": "Maintenance & Support",
+        "description": "Ongoing maintenance and support services to ensure continuous reliability.",
+        "features": ["Preventive Maintenance", "Emergency Repairs", "Upgrades", "24/7 Support", "Spare Parts", "Performance Monitoring"]
+      },
+      {
+        "icon": "Users",
+        "title": "Training & Consultation",
+        "description": "Expert training and consultation for fire safety and system operation.",
+        "features": ["Safety Training", "Operation Training", "Emergency Response", "Consultation", "Compliance Review", "Risk Assessment"]
+      }
+    ],
+    "industries": [
+      { "name": "Industrial Facilities", "icon": "Building" },
+      { "name": "Commercial Buildings", "icon": "Building" },
+      { "name": "Healthcare Facilities", "icon": "Shield" },
+      { "name": "Educational Institutions", "icon": "Users" },
+      { "name": "Hospitality Sector", "icon": "Building" },
+      { "name": "Government Buildings", "icon": "Shield" }
+    ],
+    "process": [
+      { "step": "01", "title": "Consultation & Assessment", "description": "We analyze your requirements and conduct thorough site assessments." },
+      { "step": "02", "title": "Design & Engineering", "description": "Our engineers design solutions that comply with all standards." },
+      { "step": "03", "title": "Installation & Testing", "description": "Professional installation followed by comprehensive testing." },
+      { "step": "04", "title": "Support & Maintenance", "description": "Ongoing support and maintenance for reliability." }
+    ]
+  }
+
+  ,
+  "products": {
+    "heroTitle": "Fire Valves & Fire Protection Systems",
+    "heroSubtitle": "FM & UL Approved Products – Engineered for Optimal Performance.",
+    "heroButton": "View Catalogs",
+    "sectionTitle": "Our Featured Products",
+    "sectionSubtitle": "Explore technical specifications, certifications, and download product PDFs directly.",
+    "catalogButton": "View Catalog",
+    "downloadPdf": "Download PDF",
+    "whyChooseUsTitle": "Why Choose Our Products?",
+    "whyChooseUsText": "We deliver complete fire protection solutions focused on quality, reliability, and customer satisfaction. Our products are FM & UL approved and comply with international standards.",
+    "quality": "World-Class Quality",
+    "qualityText": "Each product undergoes rigorous testing to ensure maximum performance and reliability.",
+    "safety": "Certified Safety Standards",
+    "safetyText": "All our products meet ISO, FM, and UL certification standards for quality and safety.",
+    "support": "Continuous Technical Support",
+    "supportText": "Our engineering team is always ready to provide technical support and recommendations for your applications.",
+    "ctaTitle": "Don’t Wait for System Failure",
+    "ctaSubtitle": "Regular maintenance ensures reliability, safety, and compliance. Let’s keep your fire protection systems always ready.",
+    "ctaButton1": "Get Maintenance Quote",
+    "ctaButton2": "View All Services",
+    "productsList": {
+      "extraTitle": "Additional Products",
+      "extraSubtitle": "Additional range of catalog-listed fire protection products."
+    }
+  }
 }
