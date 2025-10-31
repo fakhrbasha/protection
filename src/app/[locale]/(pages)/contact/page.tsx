@@ -232,9 +232,7 @@ export default function ContactPage() {
                       <p className="opacity-90 text-sm">
                         {t('info.emergency.description')}
                       </p>
-                      <p className="font-semibold mt-2">
-                        {t('info.emergency.phone')}
-                      </p>
+                      <p className="font-semibold mt-2">+20 101 1006 205</p>
                     </div>
                   </div>
                 </CardContent>

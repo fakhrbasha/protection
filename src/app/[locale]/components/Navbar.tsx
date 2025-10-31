@@ -56,7 +56,7 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/image/logo.png" alt="logo" width={80} height={80} />
+            <Image src="/image/logo2.png" alt="logo" width={50} height={50} />
           </Link>
 
           {/* Desktop Menu */}

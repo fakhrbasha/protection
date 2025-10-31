@@ -292,7 +292,7 @@ export default function ProductsPage() {
               >
                 <Card
                   className={`overflow-hidden rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 bg-white dark:bg-gray-800 flex flex-col ${
-                    p.image ? 'h-[550px]' : 'h-auto'
+                    p.image ? 'h-auto lg:h-[550px] ' : 'h-auto'
                   }`}
                 >
                   {p.image ? (
