@@ -51,7 +51,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40 backdrop-blur-xs"></div>
 
         {/* ✨ Hero Content */}
-        <div className="container mx-auto px-4 text-center relative z-10 text-white">
+        <div className="containerr mx-auto px-4 text-center relative z-10 text-white">
           <Badge variant="secondary" className="mb-6 bg-white/20 text-white">
             {t('hero.badge')}
           </Badge>
@@ -93,7 +93,7 @@ export default function Home() {
       <BrowseProducts t={browse} />
       {/* Services Overview */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t('services.heading')}
@@ -131,7 +131,7 @@ export default function Home() {
 
       {/* Why Choose Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container px-10">
+        <div className="containerr px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

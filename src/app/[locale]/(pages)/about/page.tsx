@@ -84,7 +84,7 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -113,7 +113,7 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t('missionVision.heading')}
@@ -150,7 +150,7 @@ export default function AboutPage() {
 
       {/* Company Profile */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
       {/* Management Policy */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -236,7 +236,7 @@ export default function AboutPage() {
 
       {/* Call to Action */}
       {/* <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
+        <div className="containerr mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t('cta.heading')}
           </h2>
@@ -269,7 +269,7 @@ export default function AboutPage() {
         {/* 🟪 Overlay for contrast */}
         <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
 
-        <div className="relative container mx-auto px-4 text-center text-primary-foreground">
+        <div className="relative containerr mx-auto px-4 text-center text-primary-foreground">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -24,6 +24,33 @@ const images = [
   '/image/Project/Gallery/14.jpg',
   '/image/Project/Gallery/15.jpg',
   '/image/Project/Gallery/16.jpg',
+  '/image/Project/Gallery/17.jpg',
+  '/image/Project/Gallery/18.jpg',
+  '/image/Project/Gallery/19.jpg',
+  '/image/Project/Gallery/21.jpg',
+  '/image/Project/Gallery/22.jpg',
+  '/image/Project/Gallery/23.jpg',
+  '/image/Project/Gallery/24.jpg',
+  '/image/Project/Gallery/25.jpg',
+  '/image/Project/Gallery/26.jpg',
+  '/image/Project/Gallery/27.jpg',
+  '/image/Project/Gallery/28.jpg',
+  '/image/Project/Gallery/29.jpg',
+  '/image/Project/Gallery/30.jpg',
+  '/image/Project/Gallery/31.jpg',
+  '/image/Project/Gallery/32.jpg',
+  '/image/Project/Gallery/33.jpg',
+  '/image/Project/Gallery/34.jpg',
+  '/image/Project/Gallery/35.jpg',
+  '/image/Project/Gallery/36.jpg',
+  '/image/Project/Gallery/37.jpg',
+  '/image/Project/Gallery/38.jpg',
+  '/image/Project/Gallery/39.jpg',
+  '/image/Project/Gallery/40.jpg',
+  '/image/Project/Gallery/41.jpg',
+  '/image/Project/Gallery/42.jpg',
+  '/image/Project/Gallery/43.jpg',
+  '/image/Project/Gallery/44.jpg',
 ];
 
 // 🎥 Video data
@@ -36,20 +63,28 @@ const videos = [
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const t = useTranslations('About');
-
+  const tt = useTranslations('About');
+  const t = useTranslations('Gallery');
   return (
     <>
       <section className="w-full bg-background min-h-screen overflow-hidden">
         {/* Hero Section */}
         <div className="relative h-[60vh] w-full mb-16">
-          <Image
-            src="/image/careHero.png"
-            alt="El Abd Factory Hero"
-            fill
-            className="object-cover brightness-75"
-            priority
-          />
+          <motion.div
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src="/image/careHero.png"
+              alt="El Abd Factory Hero"
+              fill
+              className="object-cover brightness-75"
+              priority
+            />
+          </motion.div>
+
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
             <motion.h1
               initial={{ y: 40, opacity: 0 }}
@@ -57,7 +92,8 @@ export default function GalleryPage() {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold mb-4"
             >
-              <span className="text-red-500">Protection</span> Gallery
+              <span className="text-red-500">{t('hero.highlight')}</span>{' '}
+              {t('hero.title')}
             </motion.h1>
             <motion.p
               initial={{ y: 30, opacity: 0 }}
@@ -65,8 +101,7 @@ export default function GalleryPage() {
               transition={{ delay: 0.2 }}
               className="max-w-2xl text-lg md:text-xl text-gray-200"
             >
-              Discover our integrated fire protection systems and safety
-              installations Sadat City.
+              {t('hero.subtitle')}
             </motion.p>
           </div>
         </div>
@@ -75,15 +110,14 @@ export default function GalleryPage() {
           {/* Gallery Header */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Project Gallery
+              {t('gallery.heading')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A showcase of our fire safety installations, advanced
-              technologies, and project implementations across the facility.
+              {t('gallery.description')}
             </p>
           </div>
 
-          {/* 🖼️ Gallery Grid */}
+          {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
             {images.map((src, idx) => (
               <motion.div
@@ -104,14 +138,13 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          {/* 🎥 Videos Section */}
+          {/* Videos Section */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Project Videos
+              {t('videos.heading')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore the project in motion — our fire protection systems,
-              testing phases, and installation procedures.
+              {t('videos.description')}
             </p>
           </div>
 
@@ -145,7 +178,7 @@ export default function GalleryPage() {
           </div>
         </div>
 
-        {/* 🖼️ Lightbox Modal */}
+        {/* Lightbox Modal */}
         <AnimatePresence>
           {selectedImage && (
             <motion.div
@@ -180,10 +213,10 @@ export default function GalleryPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
-              {t('cta.heading')}
+              {tt('cta.heading')}
             </h2>
             <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto leading-relaxed">
-              {t('cta.description')}
+              {tt('cta.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -194,7 +227,7 @@ export default function GalleryPage() {
                 asChild
               >
                 <Link href="/services" className="flex items-center space-x-2">
-                  <span>{t('cta.buttons.services')}</span>
+                  <span>{tt('cta.buttons.services')}</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -205,7 +238,7 @@ export default function GalleryPage() {
                 className="px-8 py-6 text-lg border-2 font-semibold border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-transparent"
                 asChild
               >
-                <Link href="/contact">{t('cta.buttons.contact')}</Link>
+                <Link href="/contact">{tt('cta.buttons.contact')}</Link>
               </Button>
             </div>
           </motion.div>

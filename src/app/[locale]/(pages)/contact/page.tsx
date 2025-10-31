@@ -14,6 +14,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { Phone, Mail, MapPin, Clock, Send, Shield } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { RevealLinks } from '../../components/LinkTest/LinksTest';
 
 export default function ContactPage() {
   const t = useTranslations('Contact');
@@ -40,7 +41,7 @@ export default function ContactPage() {
 
       {/* Contact Form & Info */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
@@ -215,27 +216,6 @@ export default function ContactPage() {
                 </Card>
 
                 {/* Hours */}
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Clock className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">
-                          {t('info.hours.title')}
-                        </h3>
-                        {t
-                          .raw('info.hours.lines')
-                          .map((line: string, i: number) => (
-                            <p key={i} className="text-muted-foreground">
-                              {line}
-                            </p>
-                          ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </div>
 
               {/* Emergency Contact */}
@@ -263,36 +243,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
+      <RevealLinks />
       {/* Map Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('map.heading')}
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              {t('map.description')}
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card>
-              <CardContent className="p-0">
-                <div className="aspect-[16/9] bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                    <p className="text-muted-foreground">{t('map.note')}</p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      {t('map.address')}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

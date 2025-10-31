@@ -11,29 +11,29 @@ export default function BrowseProducts({ t }: { t: any }) {
     {
       title: 'Fire Protection',
       image: '/image/product/A155S.png',
-      link: '/products/extinguishers',
+      link: '/products',
     },
     {
       title: 'Flanged Gate Valve',
       image: '/image/product/2.png',
-      link: '/products/smoke-detectors',
+      link: '/products',
     },
     {
       title: 'Valve Resilient Seat',
       image: '/image/product/DOC.png',
-      link: '/products/alarm-panels',
+      link: '/products',
     },
     {
       title: 'Fire Fighting System',
       image: '/image/product/FireFighting.png',
-      link: '/products/sprinklers',
+      link: '/products',
     },
   ];
 
   return (
     <section className="relative py-24 overflow-hidden bg-gradient-to-b from-red-900/10 via-background to-background text-center">
       {/* 🔥 subtle glow background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.1),transparent_70%)] pointer-events-none"></div>
+      <div className="absolute inset-0  pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* ✨ Title Animation */}
