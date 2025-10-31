@@ -36,7 +36,7 @@ const FactoryAndMall = () => {
           >
             <div className="relative w-full">
               <img
-                src="/image/project/a1.jpg"
+                src="/image/Project/a1.jpg"
                 alt="Masna3 El Abd"
                 className="w-full h-[400px]"
               />
@@ -97,7 +97,7 @@ const FactoryAndMall = () => {
           >
             <div className="relative w-full">
               <img
-                src="/image/project/R1.jpg"
+                src="/image/Project/R1.jpg"
                 alt="Ritzy Mall"
                 className="w-full h-[400px]"
               />
