@@ -242,8 +242,9 @@
 
   "ClientPage": {
       "hero": {
-      "title": "Our Trusted <span>Clients</span>",
+      "main": "Our Trusted Clients",
       "subtitle": "Over 15 years of protecting Egypt's most important facilities with world-class fire safety solutions",
+      "button": "Gallery",
       "stats": {
         "projects": "Projects Completed",
         "clients": "Satisfied Clients",
@@ -671,7 +672,7 @@
       "alt": "Fire protection valves",
       "title": "Firefighting Valves & Systems Solutions",
       "subtitle": "FM & UL certified products engineered for optimal performance.",
-      "button": "View Catalogs"
+      "button": "View Gallery"
     },
     "catalog": {
       "title": "Our Featured Products",
@@ -702,6 +703,52 @@
       "title": "Need help choosing the right product?",
       "subtitle": "Contact us and our technical team will guide you to the best firefighting solutions for your project.",
       "button": "Contact Us Now"
+    }
+  },
+  "Projects": {
+    "hero": {
+      "title": "Our Projects",
+      "description": "Explore our achievements across various sectors, where quality and excellence define every project we deliver.",
+      "scroll": "Scroll Down ↓"
+    },
+    "moreProjects": {
+      "title": "More Projects & Clients",
+      "description": "We have successfully completed numerous fire protection projects across Egypt. Visit our galleries and see our satisfied clients.",
+      "gallery": "Show Protection Gallery",
+      "clients": "Our Clients"
+    }
+  },
+    "Factory": {
+    "section": {
+      "tag": "PROTECTION",
+      "title": "Our Fire Safety Projects",
+      "description": "Showcasing our fire safety systems implemented in major industrial and commercial sites across Egypt."
+    },
+    "elabd": {
+      "label": "El Abd Factory",
+      "title": "El Abd Factory",
+      "location": "Located in Sadat City",
+      "description": "A leading sweets manufacturer where we executed a full fire protection system using FM & UL approved products.",
+      "features": {
+        "monitoring": "Fire Safety Monitoring",
+        "coverage": "Equipment Coverage Across Departments",
+        "compliance": "Compliance with Safety Standards",
+        "safety": "Employee & Facility Safety"
+      },
+      "button": "Explore El Abd Factory →"
+    },
+    "ritzy": {
+      "label": "Ritzy Mall",
+      "title": "Ritzy Mall",
+      "location": "Located in Sheikh Zayed",
+      "description": "Implemented advanced fire protection systems ensuring full safety for visitors and staff.",
+      "features": {
+        "monitoring": "Fire Safety Monitoring",
+        "coverage": "Equipment Coverage in All Areas",
+        "compliance": "Compliance with Safety Standards",
+        "safety": "Visitor & Staff Safety"
+      },
+      "button": "Explore Ritzy Mall →"
     }
   }
 }

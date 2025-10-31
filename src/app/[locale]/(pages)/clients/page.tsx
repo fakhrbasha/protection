@@ -17,8 +17,10 @@ import {
   Star,
   Quote,
 } from 'lucide-react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Link } from '@/i18n/routing';
 
 export default function ClientPage() {
   const t = useTranslations('ClientPage');
@@ -64,41 +66,36 @@ export default function ClientPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-primary/10 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              {t.rich('hero.title', {
-                span: (chunks) => (
-                  <span className="text-primary">{chunks}</span>
-                ),
-              })}
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              {t('hero.subtitle')}
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-center">
-              <div className="bg-background/80 backdrop-blur rounded-lg p-4 border">
-                <div className="text-3xl font-bold text-primary">18</div>
-                <div className="text-sm text-muted-foreground">
-                  {t('hero.stats.projects')}
-                </div>
-              </div>
-              <div className="bg-background/80 backdrop-blur rounded-lg p-4 border">
-                <div className="text-3xl font-bold text-primary">18</div>
-                <div className="text-sm text-muted-foreground">
-                  {t('hero.stats.clients')}
-                </div>
-              </div>
-              <div className="bg-background/80 backdrop-blur rounded-lg p-4 border">
-                <div className="text-3xl font-bold text-primary">15+</div>
-                <div className="text-sm text-muted-foreground">
-                  {t('hero.stats.experience')}
-                </div>
-              </div>
-            </div>
+      <section className="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
+        <Image
+          src="/image/careHero.png"
+          alt={t('hero.alt')}
+          fill
+          className="object-cover brightness-[0.65]"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-white px-6"
+        >
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
+            {t('hero.main')}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            {t('hero.subtitle')}
+          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-red-700 hover:bg-gray-100 font-semibold px-8"
+            >
+              <Link href="/gallery">{t('hero.button')}</Link>
+            </Button>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Client Categories */}
