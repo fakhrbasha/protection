@@ -13,7 +13,7 @@ const FactoryAndMall = () => {
     <section className="py-20 w-full bg-background">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-4">
-          <span className="px-4 py-2 text-sm font-semibold bg-foreground text-background rounded-full">
+          <span className="px-4 py-2 text-sm font-semibold bg-red-600 text-background rounded-full">
             {t('section.tag')}
           </span>
         </div>

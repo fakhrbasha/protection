@@ -38,7 +38,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t('company.description')}
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Link
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -57,7 +57,7 @@ export function Footer() {
               >
                 <Twitter className="h-5 w-5" />
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -149,7 +149,7 @@ export function Footer() {
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; 2025 ProtectionCO - Safety Equipment Service Company.{' '}
+            &copy; 2025 Protection - Safety Equipment Service Company.{' '}
             {t('rights')}
           </p>
         </div>
