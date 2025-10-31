@@ -85,7 +85,7 @@ export default function FireAlarmsSystemPage() {
 
       {/* 🔥 Alarm System Types */}
       <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t('typesTitle')}
@@ -171,7 +171,7 @@ export default function FireAlarmsSystemPage() {
 
       {/* 🔍 Detection Technologies */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t('detectionTitle')}
@@ -204,7 +204,7 @@ export default function FireAlarmsSystemPage() {
 
       {/* 🧩 System Features */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t('featuresTitle')}
@@ -232,7 +232,7 @@ export default function FireAlarmsSystemPage() {
 
       {/* 🚧 Installation Process */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 text-center">
+        <div className="containerr mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t('installationTitle')}
           </h2>
@@ -261,7 +261,7 @@ export default function FireAlarmsSystemPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-600 via-red-700 to-red-900 dark:from-red-700 dark:via-red-800 dark:to-red-950 animate-gradient-slow" />
         <div className="absolute inset-0 bg-black/30 mix-blend-multiply dark:bg-black/40" />
 
-        <div className="relative container mx-auto px-4 text-center text-white">
+        <div className="relative containerr mx-auto px-4 text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

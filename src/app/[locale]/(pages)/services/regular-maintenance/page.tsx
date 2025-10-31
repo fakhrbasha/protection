@@ -74,7 +74,7 @@ export default function RegularMaintenancePage() {
 
       {/* 🧯 Maintenance Services */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               {t('servicesTitle')}
@@ -146,7 +146,7 @@ export default function RegularMaintenancePage() {
 
       {/* 🧾 Maintenance Checklist */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -176,7 +176,7 @@ export default function RegularMaintenancePage() {
 
       {/* ☎️ Emergency Support */}
       <section className="py-20 bg-primary/5">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center mb-6">
               <Phone className="h-12 w-12 text-primary mr-4" />
@@ -220,7 +220,7 @@ export default function RegularMaintenancePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary-foreground/30 dark:from-primary dark:via-primary/80 dark:to-primary-foreground/20 animate-gradient-slow" />
         <div className="absolute inset-0 bg-black/30 mix-blend-multiply" />
 
-        <div className="relative container mx-auto px-4 text-center text-primary-foreground">
+        <div className="relative containerr mx-auto px-4 text-center text-primary-foreground">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

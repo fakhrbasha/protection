@@ -15,9 +15,9 @@ import {
   Users,
   Award,
 } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 export default function FireSystemSolutionPage() {
   const t = useTranslations('FireSystemProtection');
@@ -77,7 +77,7 @@ export default function FireSystemSolutionPage() {
 
       {/* 🔧 Implementation Process */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t('process.heading')}
@@ -110,7 +110,7 @@ export default function FireSystemSolutionPage() {
 
       {/* 🛡️ Why Choose Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="containerr mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t('why.heading')}
@@ -122,7 +122,6 @@ export default function FireSystemSolutionPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((item: any, i: number) => {
-              // استخدم الخريطة لتحويل الاسم إلى أيقونة فعلية
               const IconComponent = iconMap[item.icon] || Shield;
 
               return (
@@ -144,7 +143,7 @@ export default function FireSystemSolutionPage() {
 
       {/* 🚨 CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-red-800 text-white">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
+        <div className="containerr mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('cta.heading')}
           </h2>
@@ -165,7 +164,7 @@ export default function FireSystemSolutionPage() {
               size="lg"
               className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-red-600"
             >
-              <Link href="/services/maintenance">
+              <Link href="/services/regular-maintenance">
                 {t('cta.buttons.maintenance')}
               </Link>
             </Button>

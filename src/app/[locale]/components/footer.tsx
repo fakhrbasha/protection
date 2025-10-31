@@ -11,19 +11,29 @@ import {
   Twitter,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export function Footer() {
   const t = useTranslations('Footer');
 
   return (
     <footer className="bg-card border-t">
-      <div className="container mx-auto px-4 py-12">
+      <div className="containerr mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold">Protection</span>
+            <div className="flex items-center gap-3">
+              <div className="relative w-14 h-14">
+                <Image
+                  src="/image/logo2.png"
+                  alt="logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-2xl font-bold tracking-wide">
+                Protec<span className="text-red-600">ti</span>on
+              </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t('company.description')}
@@ -94,19 +104,25 @@ export function Footer() {
             <h3 className="font-semibold">{t('services')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <span className="text-muted-foreground">
-                  {t('servicesList.fireProtection')}
-                </span>
+                <Link href={'/services/fire-Protection'}>
+                  <span className="text-muted-foreground">
+                    {t('servicesList.fireProtection')}
+                  </span>
+                </Link>
               </li>
               <li>
-                <span className="text-muted-foreground">
-                  {t('servicesList.fireAlarm')}
-                </span>
+                <Link href={'/services/fire-Alarms-Systems'}>
+                  <span className="text-muted-foreground">
+                    {t('servicesList.fireAlarm')}
+                  </span>
+                </Link>
               </li>
               <li>
-                <span className="text-muted-foreground">
-                  {t('servicesList.maintenance')}
-                </span>
+                <Link href={'/services/regular-maintenance'}>
+                  <span className="text-muted-foreground">
+                    {t('servicesList.maintenance')}
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>

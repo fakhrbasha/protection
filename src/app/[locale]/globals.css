@@ -127,7 +127,7 @@
   }
 }
 @layer components{
-  .container {
+  .containerr {
     @apply mx-auto w-[95%]
   }
 }
